@@ -1,0 +1,13 @@
+- Getting Started
+  - [Overview](/docs/README.md)
+  - [Installation Instructions](/docs/installation/installation-instructions.md)
+  - [RIST Self-hosting Guide](/docs/installation/rist-self-hosting-guide.md)
+- Guides
+  - [Streaming Protocols](/docs/protocols/how-to-use-streaming-protocols.md)
+  - [Device Connection](/docs/devices/how-to-connect-your-devices.md)
+  - [Troubleshooting](/docs/troubleshooting/basic-troubleshooting.md)
+- Hardware
+  - [Compatible Gear](/docs/devices/gear-recommendations-tested.md)
+- Developers
+  - [API Server](/docs/developers/api-server.md)
+  - [Cellular Band Information](/docs/devices/cellular_band_info.md)

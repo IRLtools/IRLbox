@@ -1,0 +1,84 @@
+# Track only index.html and Markdown guides under docs/
+
+# Ignore everything by default
+*
+
+# But keep the ignore file itself
+!.gitignore
+
+# Keep site entrypoint
+!/index.html
+
+# Keep docs folder and only Markdown files inside it
+!/docs/
+!/docs/**/
+!/docs/**/*.md
+!/docs/assets/**
+
+# Temporarily allow tools for maintenance scripts
+!/tools/**
+
+# Do not include any other files
+# Node dependencies
+node_modules/
+
+# Temp and cache
+tmp/
+tmp/**
+/.cache/
+/dist/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Env
+.env
+
+# Keep site and docs tracked
+!index.html
+
+# Do not ignore lockfile (keep deterministic installs)
+# (uncomment to ignore)
+# package-lock.json
+# Logs
+# logs/
+# *.log
+# npm-debug.log*
+
+# Node
+# node_modules/
+
+# OS
+# .DS_Store
+# Thumbs.db
+
+# Build/output
+# /dist
+# /.cache
+
+# Misc
+# .env
+
+# Migration and local helper files (do not commit)
+# /README.md            # root helper readme (docs/README.md is kept)
+# Temporarily allow tools folder for troubleshooting
+# /tools/*
+# !/tools/migrate.ps1
+# !/tools/migrate2.ps1
+# /tmp/
+# /tmp/**
+# /images/              # legacy; we use docs/assets now
+# /tmp.html             # any stray temp files
+# *.tmp
+
+# Raw HTML artifacts generated during scraping (keep index.html)
+# /tmp/*.html
+
+# Inventory notes (local only)
+# /docs/inventory.md

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>IRLBox Docs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css">
+</head>
+<body>
+  <div id="app"></div>
+  <script>
+    window.$docsify = {
+      name: 'IRLBox Docs',
+      repo: 'https://github.com/IRLtools/IRLbox',
+      // Point Docsify to read content from the docs/ directory
+      homepage: 'docs/README.md',
+      loadSidebar: 'docs/_sidebar.md',
+      subMaxLevel: 2,
+      auto2top: true,
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-edit-on-github@1.0.3/index.js"></script>
+  <script>
+    window.$docsify.plugins = [].concat(
+      EditOnGithubPlugin.create('https://github.com/IRLtools/IRLbox/blob/main/docs/'),
+      window.$docsify.plugins || []
+    );
+  </script>
+</body>
+</html>
