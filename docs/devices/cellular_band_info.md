@@ -1,46 +1,77 @@
-List of Cellular Bands Used by Most Major Carriers
-======================================================
+# Cellular Band Information
 
-| Country | Carrier | 4G (LTE) Bands | 5G (NR) Bands |
-|----|----|----|----|
-| United States | AT&T | B2, B4, B5, B12, B14, B17, B29, B30, B66 | N5, N77, N260, N261 |
-| United States | Verizon | B2, B4, B5, B13, B66 | N2, N5, N66, N77, N260, N261 |
-| United States | T-Mobile | B2, B4, B12, B66, B71 | N71, N41, N25, N258, N260, N261, N77 |
-| United Kingdom | EE | B1, B3, B7, B20, B28 | N78, N1, N7, N28 |
-| United Kingdom | Vodafone | B1, B3, B7, B8, B20 | N78 |
-| United Kingdom | O2 | B1, B3, B20 | N78 |
-| United Kingdom | Three | B1, B3, B20, B32 | N78 |
-| Germany (EU) | Deutsche Telekom | B1, B3, B8, B20 | N1, N78 |
-| France (EU) | Orange | B1, B3, B7, B20 | N78, N28 |
-| Spain (EU) | Telefﾃｳnica | B1, B3, B7, B20 | N78 |
-| Multi-EU | Vodafone | B1, B3, B7, B8, B20 | N78, N1 |
-| Italy (EU) | Telecom Italia | B1, B3, B7, B20 | N78 |
-| Australia | Telstra | B1, B3, B5, B7, B28, B40 | N78, N258 |
-| Australia | Optus | B1, B3, B7, B28, B40 | N78, N258 |
-| Australia | Vodafone | B1, B3, B5, B7, B20? | N78 |
-| Japan | NTT DoCoMo | B1, B3, B19, B21, B28, B42 | N78, N79 |
-| Japan | KDDI (au) | B1, B3, B11, B18, B26, B28, B41 | N77, N78, N257, N79 |
-| Japan | SoftBank | B1, B3, B8, B41 | N77, N78, N257 |
-| India | Reliance Jio | B3, B5, B40 | N78, N28 |
-| India | Airtel | B1, B3, B8, B40, B41 | N78 |
-| India | Vi (Vodafone/Idea) | B1, B3, B8, B41? | N78? |
-| Canada | Rogers | B2, B4, B5, B7, B12, B13?, B17?, B66 | N2, N5, N66, N78 |
-| Canada | Bell | B2, B4, B5, B7, B12, B13?, B17?, B66 | N2, N5, N66, N78 |
-| Canada | Telus | B2, B4, B5, B7, B12, B13?, B17?, B66 | N2, N5, N66, N78 |
-| Brazil | Vivo | B3, B7, B28 | N78 |
-| Brazil | Claro | B3, B7, B28 | N78 |
-| Brazil | TIM | B3, B7, B28 | N78 |
-| Brazil | Oi | B7, B28 | N78 |
-| Malaysia | Celcom | B3, B7, B8, B28 | N78 |
-| Malaysia | Digi | B3, B7, B8, B28 | N78 |
-| Malaysia | Maxis | B1, B3, B7, B8, B28 | N78 |
-| Malaysia | U Mobile | B3, B7, B8 | N78 |
-| Mexico | Telcel | B2, B4, B5, B7, B28, B66 | N78 |
-| Mexico | AT&T Mexico | B2, B4, B5, B66 | N78 |
-| Mexico | Movistar | B2, B4, B7 | N78 |
-| South Africa | Vodacom | B1, B3, B7, B8, B20, B28 | N78 |
-| South Africa | MTN | B1, B3, B7, B8, B20, B28 | N78 |
-| South Africa | Cell C | B1, B3, B7, B20 | N78 |
-| South Africa | Telkom | B3, B20, B40 | N78 |
+Interactive cellular band finder for major carriers worldwide.
+
+<style>
+  .cellui { --bg:#0b0f14; --fg:#e8eef6; --mut:#9fb0c2; --card:#121a22; --chip:#182231; --chipb:#1f2b3b; --ok:#5fdb6d; --mmw:#caa7ff; --brd:#203040; }
+  .cellui * { box-sizing:border-box; }
+  .cellui { font-family: Inter, ui-sans-serif, system-ui, Segoe UI, Roboto, Helvetica, Arial, Apple Color Emoji, Noto Color Emoji, EmojiOne; color:var(--fg); background:transparent; }
+  .cellui .bar { position:sticky; top:0; z-index:5; background:linear-gradient(180deg, rgba(11,15,20,.95), rgba(11,15,20,.85)); backdrop-filter:saturate(1.2) blur(6px); border:1px solid var(--brd); border-radius:14px; padding:10px; margin:8px 0 16px; display:grid; gap:10px; grid-template-columns: 1fr 160px 120px 120px; }
+  .cellui .bar input, .cellui .bar select, .cellui .bar button {
+    width:100%; padding:10px 12px; border-radius:12px; border:1px solid var(--brd); background:var(--card); color:var(--fg); outline:none;
+  }
+  .cellui .bar .tog { display:flex; gap:8px; }
+  .cellui .bar .tog button { cursor:pointer; background:var(--chip); border:1px solid var(--brd); }
+  .cellui .bar .tog button.active { background:var(--chipb); }
+  .cellui .table { width:100%; border-collapse:separate; border-spacing:0 8px; }
+  .cellui .row { background:var(--card); border:1px solid var(--brd); border-radius:16px; overflow:hidden; }
+  .cellui .row > div { padding:10px 12px; }
+  .cellui .row.head { background:transparent; border:0; font-weight:700; color:var(--mut); }
+  .cellui .row .country { display:flex; gap:10px; align-items:center; cursor:pointer; }
+  .cellui .flag { width:20px; height:20px; }
+  .cellui .carrier { font-weight:600; }
+  .chips { display:flex; flex-wrap:wrap; gap:6px; }
+  .chip { background:var(--chip); border:1px solid var(--brd); padding:6px 8px; border-radius:10px; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size:12px; cursor:pointer; }
+  .chip[data-mmwave="1"]{ outline:1px dashed var(--mmw); }
+  .chip:hover { transform:translateY(-1px); }
+  
+  /* Band color coding */
+  .chip[data-band-type="low"] { background: linear-gradient(135deg, #4ade80, #22c55e); color: #000; }
+  .chip[data-band-type="mid"] { background: linear-gradient(135deg, #60a5fa, #3b82f6); color: #fff; }
+  .chip[data-band-type="high"] { background: linear-gradient(135deg, #f472b6, #ec4899); color: #fff; }
+  .chip[data-band-type="mmwave"] { background: linear-gradient(135deg, #c084fc, #a855f7); color: #fff; outline: 2px dashed #fbbf24; }
+  .chip[data-band-type="special"] { background: linear-gradient(135deg, #fb923c, #f97316); color: #fff; }
+  .notes { color:var(--mut); font-size:12px; margin-top:6px; }
+  .hidden { display:none; }
+
+  @media (max-width:900px){
+    .cellui .bar { grid-template-columns: 1fr 1fr; }
+    .cellui .bar .tog { grid-column:1/-1; }
+  }
+</style>
+
+<div class="cellui" id="bands-app">
+
+  <!-- Filter Bar -->
+  <div class="bar">
+    <input id="q" placeholder="Search country / carrier / band (e.g. n78, B20, 'Telcel')">
+    <select id="country">
+      <option value="">All countries</option>
+    </select>
+    <div class="tog" role="group" aria-label="4G/5G filter">
+      <button type="button" data-type="lte" class="active">Show 4G (LTE)</button>
+      <button type="button" data-type="nr" class="active">Show 5G (NR)</button>
+    </div>
+    <button id="clear">Reset</button>
+  </div>
+
+  <!-- Head -->
+  <div class="row head" style="display:grid;grid-template-columns: 220px 220px 1fr 1fr; gap:8px;">
+    <div>Country</div><div>Carrier</div><div>4G (LTE)</div><div>5G (NR)</div>
+  </div>
+
+  <!-- DATA ROWS (tap chips to copy) -->
+  <div id="rows"></div>
+
+  <div class="notes">
+    Tap a band to copy. Click a country to toggle extra notes.<br>
+    <strong>Band Colors:</strong> 
+    <span class="chip" data-band-type="low" style="margin:2px;">Low</span>
+    <span class="chip" data-band-type="mid" style="margin:2px;">Mid</span>
+    <span class="chip" data-band-type="high" style="margin:2px;">High</span>
+    <span class="chip" data-band-type="mmwave" style="margin:2px;">mmWave</span>
+    <span class="chip" data-band-type="special" style="margin:2px;">Special</span>
+  </div>
+</div>
 
 

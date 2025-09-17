@@ -82,8 +82,8 @@ All modems listed are "Global" capable, unless noted otherwise.
 > > **M.2 (NGFF) wifi modules are *only* compatible with Rock 5A, Orange Pi 5 Plus, and other *supported* SBCs with an M.2 "E-Key" Slot.**  
 > > Additionally, Intel modules are not recommended for creating an access point (AP) or "hotspot".
 
-[29] Cameras
----------------
+[3] Cameras
+-----------
 
 | Cameras | Supported Modes | Compatibility | Purchase Link | Notes |
 |----|----|----|----|----|
@@ -96,22 +96,22 @@ All modems listed are "Global" capable, unless noted otherwise.
 | Sony HDR-AS300 | HDMI | <img src="/docs/assets/0faad45f973f2cf62bf433140a30e833a8c2ceb0.png" class="align-center" alt="green_check_32px.png" /> |  |  |
 | Sony HDR-AS200V | HDMI | <img src="/docs/assets/0faad45f973f2cf62bf433140a30e833a8c2ceb0.png" class="align-center" alt="green_check_32px.png" /> |  | Bad stabilization |
 
-[36] Cables
---------------
+[4] Cables
+----------
 
 | Cables | Type | Purchase Link |
 |--------|------|---------------|
 |        |      |               |
 
-[37] Cases for IRLbox
-------------------------
+[5] Cases for IRLbox
+--------------------
 
 | Cases for IRLbox | Compatibility | Purchase Link |
 |------------------|---------------|---------------|
 |                  |               |               |
 
-[38] Powerbank / Batteries
------------------------------
+[6] Powerbank / Batteries
+-------------------------
 
 | Powerbank / Batteries  | Capacity | Purchase Link  |
 |------------------------|----------|----------------|

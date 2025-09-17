@@ -1,13 +1,18 @@
 - Getting Started
   - [Overview](/docs/README.md)
-  - [Installation Instructions](/docs/installation/installation-instructions.md)
-  - [RIST Self-hosting Guide](/docs/installation/rist-self-hosting-guide.md)
+  - [IRLbox Standard Installation](/docs/installation/irlbox-standard-installation.md)
+  - [IRLbox Advanced Installation](/docs/installation/irlbox-advanced-installation.md)
+  - [RIST Docker Guide](/docs/installation/rist-docker-guide.md)
+  - [RIST Standalone Guide](/docs/installation/rist-standalone-guide.md)
 - Guides
   - [Streaming Protocols](/docs/protocols/how-to-use-streaming-protocols.md)
   - [Device Connection](/docs/devices/how-to-connect-your-devices.md)
   - [Troubleshooting](/docs/troubleshooting/basic-troubleshooting.md)
 - IRLbridge
-  - [Overview & Setup](/docs/irlbridge/irlbridge-overview.md)
+  - [IRLbridge](/docs/irlbridge/irlbridge-overview.md)
+  - [Overview & Setup](/docs/irlbridge/overview-setup.md)
+  - [Dashboard Interface](/docs/irlbridge/dashboard-interface.md)
+  - [Use Cases & Tips](/docs/irlbridge/use-cases-tips.md)
 - Hardware
   - [Compatible Gear](/docs/devices/gear-recommendations-tested.md)
 - Developers

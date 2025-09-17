@@ -1,5 +1,6 @@
-Wifi Module Specifications
-==============================
+# WiFi Module Specifications
+
+## [1] Module Details
 
 > NOTE:  
 > Not all bands, frequencies, modes, or data rates may work with IRLbox and may require future software updates to achieve full support.
