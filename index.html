@@ -243,7 +243,41 @@ section.cover .cover-main > p:last-child a:hover { transform: translateY(-1px); 
 }
 .markdown-section h2, .markdown-section h3 { border-bottom: 1px solid var(--line-1); padding-bottom: .35rem; }
 .markdown-section p, .markdown-section li { color: var(--text-2); }
-.markdown-section strong { color: var(--text-1) !important; }
+/* --- Strong/bold text --- */
+.markdown-section strong {
+  color: var(--brand-4) !important;
+  font-weight: 700;
+}
+
+/* --- Better spacing and visual separation --- */
+.markdown-section h2 {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line-1);
+}
+
+.markdown-section h2:first-of-type {
+  border-top: none;
+  padding-top: 0;
+  margin-top: 1rem;
+}
+
+.markdown-section h3 {
+  margin-top: 2.5rem;
+  position: relative;
+}
+
+.markdown-section h3::before {
+  content: "";
+  position: absolute;
+  left: -1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 20px;
+  background: var(--brand-4);
+  border-radius: 2px;
+}
 
 /* Links underline accent */
 .markdown-section a {
@@ -524,22 +558,70 @@ body,
 .markdown-section h3,
 .markdown-section h4 {
   margin-top: 2.4rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
   line-height: 1.3;
   color: var(--text-1) !important;
   font-weight: 700;
 }
-.markdown-section h1 { font-size: 2rem; }
-.markdown-section h2 { font-size: 1.65rem; }
-.markdown-section h3 { font-size: 1.35rem; color: var(--brand) !important; }
+
+.markdown-section h1 { 
+  font-size: 2.2rem; 
+  background: var(--brand-grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent !important;
+  margin-bottom: 1.5rem;
+}
+
+.markdown-section h2 { 
+  font-size: 1.75rem; 
+  color: var(--text-1) !important;
+  border-bottom: 2px solid var(--brand);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.markdown-section h3 { 
+  font-size: 1.4rem; 
+  color: var(--brand-4) !important;
+  font-weight: 600;
+  margin-top: 2rem;
+}
+
+.markdown-section h4 { 
+  font-size: 1.2rem; 
+  color: var(--text-1) !important;
+  font-weight: 600;
+}
 
 /* --- Paragraph & list spacing --- */
 .markdown-section p,
 .markdown-section ul,
 .markdown-section ol {
   margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
   color: var(--text-2);
+  line-height: 1.7;
+}
+
+/* --- Better list styling --- */
+.markdown-section ul {
+  padding-left: 1.5rem;
+}
+
+.markdown-section li {
+  margin-bottom: 0.6rem;
+  color: var(--text-2);
+}
+
+.markdown-section ul li::marker {
+  color: var(--brand-4);
+  font-size: 1.1em;
+}
+
+.markdown-section ol li::marker {
+  color: var(--brand);
+  font-weight: 600;
 }
 
 /* --- Sidebar adjustments --- */
@@ -549,18 +631,42 @@ body,
   font-size: 15px;
   line-height: 1.6;
 }
+
 .sidebar ul li a {
   color: var(--text-2) !important;
-  padding: 6px 12px;
+  padding: 8px 16px;
   display: block;
+  border-radius: 6px;
+  margin: 2px 8px;
+  transition: all 0.2s ease;
+  border-left: 3px solid transparent;
 }
+
 .sidebar ul li a:hover {
-  background: rgba(168,85,247,.1);
+  background: rgba(168,85,247,.15);
   color: var(--text-1) !important;
+  border-left-color: var(--brand-4);
+  transform: translateX(2px);
 }
+
 .sidebar ul li.active > a {
-  background: rgba(236,72,153,.12);
+  background: rgba(236,72,153,.18);
   color: var(--text-1) !important;
+  border-left-color: var(--brand-2);
+  font-weight: 600;
+}
+
+/* Sidebar section headers */
+.sidebar > ul > li > a {
+  font-weight: 600;
+  color: var(--text-1) !important;
+  font-size: 16px;
+  margin-top: 12px;
+}
+
+.sidebar > ul > li > ul > li > a {
+  font-size: 14px;
+  padding-left: 24px;
 }
 
 /* --- Search box improvements --- */
@@ -598,12 +704,25 @@ input[type="search"]::placeholder { color: var(--text-3); }
 
 /* --- Blockquotes --- */
 .markdown-section blockquote {
-  background: rgba(168,85,247,.08);
+  background: linear-gradient(135deg, rgba(168,85,247,.12), rgba(236,72,153,.08));
   border-left: 4px solid var(--brand);
-  color: var(--text-2);
-  padding: 1rem 1.25rem;
+  color: var(--text-1);
+  padding: 1.2rem 1.5rem;
   margin: 2rem 0;
-  border-radius: 0 8px 8px 0;
+  border-radius: 0 12px 12px 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+  position: relative;
+}
+
+.markdown-section blockquote::before {
+  content: "💡";
+  position: absolute;
+  left: -2px;
+  top: -8px;
+  background: var(--surface-1);
+  padding: 4px 8px;
+  border-radius: 50%;
+  font-size: 14px;
 }
 
 /* --- Tables --- */
