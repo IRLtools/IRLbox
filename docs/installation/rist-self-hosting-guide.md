@@ -377,6 +377,10 @@ Receiver port: 2030
 - Follow local networking laws.
 - Not for commercial resale.
 
+<<<<<<< HEAD
+=======
+  : https://www.irlbox.com/#self-hosted-rist-relay-documentation
+>>>>>>> 596eaf2f51e6da74bbe33656eea29d25a91e95e4
   [1]: https://www.irlbox.com/#docker
   [https://github.com/moo-the-cow/docker-streaming]: https://github.com/moo-the-cow/docker-streaming
   [2]: https://www.irlbox.com/#requirements
