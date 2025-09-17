@@ -1,4 +1,4 @@
-﻿[ﾂｶ] Wifi Module Specifications
+Wifi Module Specifications
 ==============================
 
 > NOTE:  
@@ -6,6 +6,5 @@
 
 ![wifi_module_detailss.png]
 
-  [ﾂｶ]: https://irlbox.com/#wifi-module-specifications
   [wifi_module_detailss.png]: /docs/assets/a580d3b8de86fbc30311efa82f6c72664652ac80.png
 

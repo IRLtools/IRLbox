@@ -5,6 +5,801 @@
   <title>IRLBox Docs</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css">
+<style>
+  /* ================================
+   IRLhosting x Docsify – Deep Theme
+   ================================ */
+
+/* (Optional) fonts; safe fallbacks included. 
+   If you already load brand fonts elsewhere, remove these. */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap');
+
+/* Prism base; you can swap for your favorite */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css');
+
+/* ---------- Brand design tokens ---------- */
+:root {
+  /* Core brand */
+  --brand:        #9B4DFF;   /* primary violet */
+  --brand-2:      #F43F8F;   /* magenta/pink secondary */
+  --brand-3:      #7C3AED;   /* deeper violet for contrasts */
+  --brand-4:      #E879F9;   /* lighter accent for hover/focus */
+
+  /* Gradient */
+  --brand-grad: linear-gradient(135deg, var(--brand) 0%, var(--brand-2) 100%);
+
+  /* Surfaces (dark) */
+  --bg:          #0C0F16;    /* App background */
+  --surface-1:   #111522;    /* Cards, panels, sidebar */
+  --surface-2:   #171C2C;    /* Elevated panels / code blocks */
+  --surface-3:   #0A0E18;    /* Header/footer strips */
+
+  /* Text */
+  --text-1:      #E6EAF3;    /* Primary text */
+  --text-2:      #AAB3C7;    /* Secondary/muted */
+  --text-3:      #7B879E;    /* Tertiary */
+
+  /* Borders / outlines */
+  --line-1:      #20273A;
+  --line-2:      #2A3350;
+  --focus:       #C084FC;    /* ring */
+
+  /* States */
+  --success:     #10B981;
+  --warning:     #F59E0B;
+  --danger:      #EF4444;
+  --info:        #60A5FA;
+
+  /* Code */
+  --code-bg:     #121628;    /* better legibility than pure black */
+  --code-frame:  #272B40;
+  --code-text:   #E8EAF6;
+  --code-inline: #1B2031;
+
+  /* UI details */
+  --radius-sm:   8px;
+  --radius-md:   12px;
+  --radius-lg:   16px;
+  --shadow-1:    0 6px 18px rgba(0,0,0,.25);
+  --shadow-2:    0 10px 30px rgba(0,0,0,.35);
+
+  /* Sizing */
+  --sidebar-w:   300px;
+  --content-max: 1100px;
+
+  /* Timing */
+  --t-fast:      120ms;
+  --t-med:       200ms;
+
+  /* Links */
+  --link:        var(--brand);
+  --link-hover:  var(--brand-4);
+}
+
+/* Global resets / base ---------------------------------------------------- */
+html, body {
+  background: var(--bg) !important;
+  color: var(--text-1) !important;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji" !important;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: rgba(155,77,255,.25);
+  color: var(--text-1);
+}
+
+a { color: var(--link) !important; transition: color var(--t-med) ease; }
+a:hover { color: var(--link-hover) !important; }
+
+/* Layout widths */
+.content, .markdown-section { max-width: var(--content-max); }
+
+/* Anchor hash icon */
+.anchor:hover > span { color: var(--brand) !important; }
+
+/* Top nav --------------------------------------------------------------- */
+.app-nav {
+  background: linear-gradient(to bottom, rgba(12,15,22,.85), rgba(12,15,22,.35));
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--line-1);
+}
+.app-nav a { color: var(--text-2) !important; }
+.app-nav a:hover, .app-nav a.active {
+  color: var(--text-1) !important;
+  border-color: transparent !important;
+  background: linear-gradient(90deg, rgba(155,77,255,.2), rgba(244,63,143,.2));
+  border-radius: var(--radius-sm);
+}
+
+/* Sidebar --------------------------------------------------------------- */
+.sidebar {
+  width: var(--sidebar-w) !important;
+  background: var(--surface-1) !important;
+  border-right: 1px solid var(--line-1) !important;
+  color: var(--text-2) !important;
+  box-shadow: var(--shadow-1);
+}
+.sidebar > h1 a {
+  display: inline-block;
+  background: var(--brand-grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent !important;
+  font-weight: 800;
+  letter-spacing: .3px;
+}
+
+.sidebar ul { padding-right: 12px; }
+.sidebar ul li a {
+  color: var(--text-2) !important;
+  border-left: 2px solid transparent;
+  padding-left: 12px;
+  border-radius: 6px;
+  transition: background var(--t-fast) ease, color var(--t-fast) ease, border-color var(--t-fast) ease;
+}
+.sidebar ul li a:hover {
+  color: var(--text-1) !important;
+  background: rgba(124,58,237,.10);
+  border-left-color: var(--brand);
+}
+.sidebar ul li.active > a {
+  color: var(--text-1) !important;
+  background: rgba(244,63,143,.10);
+  border-left-color: var(--brand-2);
+  font-weight: 600;
+}
+
+/* Sidebar scrollbar */
+.sidebar::-webkit-scrollbar { width: 10px; }
+.sidebar::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #2A3350, #1E2336);
+  border-radius: 8px;
+}
+.sidebar::-webkit-scrollbar-track { background: transparent; }
+
+/* Sidebar toggle */
+.sidebar-toggle { background: transparent !important; }
+.sidebar-toggle .sidebar-toggle-button {
+  background: var(--surface-3) !important;
+  border: 1px solid var(--line-2);
+  box-shadow: var(--shadow-1);
+}
+.sidebar-toggle .sidebar-toggle-button:hover { background: #0e1322 !important; }
+.sidebar-toggle span { background: var(--brand) !important; }
+
+/* Search (docsify/algolia/native) -------------------------------------- */
+input[type="search"] {
+  background: var(--surface-2) !important;
+  border: 1px solid var(--line-2) !important;
+  color: var(--text-1) !important;
+  border-radius: var(--radius-md) !important;
+  box-shadow: inset 0 0 0 1px transparent;
+  transition: box-shadow var(--t-fast) ease, border-color var(--t-fast) ease;
+}
+input[type="search"]::placeholder { color: var(--text-3); }
+input[type="search"]:focus {
+  outline: none;
+  border-color: transparent !important;
+  box-shadow: 0 0 0 3px rgba(155,77,255,.35);
+}
+
+.search { border-color: var(--line-1) !important; }
+.search .results-panel {
+  background: var(--surface-1);
+  color: var(--text-1) !important;
+  border: 1px solid var(--line-1);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-2);
+}
+.search .matching-post { border-color: var(--line-1) !important; }
+.search .search-keyword, .search a:hover { color: var(--brand-2) !important; }
+
+/* Cover page ----------------------------------------------------------- */
+section.cover {
+  background: radial-gradient(1200px 600px at 20% -10%, rgba(155,77,255,.25) 0%, transparent 65%),
+              radial-gradient(1000px 500px at 100% 0%, rgba(244,63,143,.20) 0%, transparent 60%),
+              var(--bg) !important;
+}
+section.cover .cover-main > h1 {
+  font-weight: 800;
+  letter-spacing: .2px;
+  background: var(--brand-grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent !important;
+}
+section.cover .cover-main > p a {
+  border-color: transparent !important;
+  color: var(--text-1) !important;
+}
+section.cover .cover-main > p:last-child a {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--line-2) !important;
+  background: rgba(124,58,237,.15);
+  color: var(--text-1) !important;
+  transition: transform var(--t-fast) ease, background var(--t-fast) ease;
+}
+section.cover .cover-main > p:last-child a:last-child {
+  background: var(--brand-grad) !important;
+  color: #0B0B11 !important;
+  border: none !important;
+}
+section.cover .cover-main > p:last-child a:hover { transform: translateY(-1px); }
+
+/* Content typography --------------------------------------------------- */
+.markdown-section {
+  color: var(--text-1) !important;
+}
+.markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section h5 {
+  color: var(--text-1) !important;
+  font-weight: 800;
+  letter-spacing: .2px;
+  scroll-margin-top: 84px;
+}
+.markdown-section h2, .markdown-section h3 { border-bottom: 1px solid var(--line-1); padding-bottom: .35rem; }
+.markdown-section p, .markdown-section li { color: var(--text-2); }
+.markdown-section strong { color: var(--text-1) !important; }
+
+/* Links underline accent */
+.markdown-section a {
+  background-image: linear-gradient(to right, rgba(155,77,255,.35), rgba(244,63,143,.35));
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 2px;
+  padding-bottom: 2px;
+}
+.markdown-section a:hover { color: var(--link-hover) !important; }
+
+/* Blockquotes */
+.markdown-section blockquote {
+  border-left: 4px solid var(--brand);
+  background: linear-gradient(0deg, rgba(124,58,237,.08), rgba(124,58,237,.08)) padding-box;
+  color: var(--text-2) !important;
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+}
+
+/* Lists */
+.markdown-section ul li::marker { color: var(--brand-4); }
+
+/* Tables */
+.markdown-section table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid var(--line-1);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-1);
+}
+.markdown-section th {
+  background: linear-gradient(0deg, rgba(124,58,237,.10), rgba(124,58,237,.10));
+  color: var(--text-1);
+  font-weight: 700;
+}
+.markdown-section td, .markdown-section th {
+  border-bottom: 1px solid var(--line-1) !important;
+}
+.markdown-section tr:nth-child(2n) { background: rgba(17,21,34,.45) !important; }
+
+/* Code: blocks + inline ----------------------------------------------- */
+.markdown-section code {
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace !important;
+  color: var(--code-text) !important;
+  background: var(--code-inline) !important;
+  border: 1px solid var(--code-frame);
+  padding: .1rem .35rem;
+  border-radius: 6px;
+}
+
+.markdown-section pre, .markdown-section pre > code {
+  background: var(--code-bg) !important;
+  color: var(--code-text) !important;
+}
+.markdown-section pre {
+  border: 1px solid var(--code-frame);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-1);
+}
+pre:after { /* optional filename/tag pseudo header if used by plugins */
+  color: var(--text-3) !important;
+}
+
+/* docsify-copy-code plugin */
+.docsify-copy-code-button {
+  top: 10px; right: 10px;
+  background: var(--surface-2) !important;
+  color: var(--text-2) !important;
+  border: 1px solid var(--line-2);
+  border-radius: 8px !important;
+  transition: background var(--t-fast) ease, border-color var(--t-fast) ease, transform var(--t-fast) ease;
+}
+.docsify-copy-code-button:hover {
+  background: #1A2133 !important;
+  border-color: var(--brand-4);
+  transform: translateY(-1px);
+}
+.docsify-copy-code-button:after {
+  background: var(--brand-grad) !important;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Alerts / callouts ---------------------------------------------------- */
+.markdown-section p.tip,
+.markdown-section p.warn,
+.markdown-section p.danger,
+.markdown-section p.info {
+  position: relative;
+  padding: 12px 14px 12px 44px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--line-2);
+  box-shadow: var(--shadow-1);
+}
+.markdown-section p.tip    { background: rgba(124,58,237,.08) !important; }
+.markdown-section p.warn   { background: rgba(245,158,11,.10) !important; border-left: 3px solid var(--warning); }
+.markdown-section p.danger { background: rgba(239,68,68,.10) !important; border-left: 3px solid var(--danger); }
+.markdown-section p.info   { background: rgba(96,165,250,.10) !important;  border-left: 3px solid var(--info); }
+
+.markdown-section p.tip:before,
+.markdown-section p.warn:before,
+.markdown-section p.danger:before,
+.markdown-section p.info:before {
+  content: "ℹ";
+  position: absolute; left: 14px; top: 12px;
+  width: 22px; height: 22px; display: grid; place-items: center;
+  border-radius: 50%;
+  color: #0C0F16;
+  font-weight: 800;
+}
+.markdown-section p.tip:before    { content: "★"; background: var(--brand-4); }
+.markdown-section p.warn:before   { content: "⚠"; background: var(--warning); }
+.markdown-section p.danger:before { content: "⨯"; background: var(--danger); }
+.markdown-section p.info:before   { content: "i";  background: var(--info); }
+
+/* Badges / labels ------------------------------------------------------ */
+.badge {
+  display: inline-block;
+  font-size: .75rem;
+  padding: .15rem .5rem;
+  border-radius: 999px;
+  border: 1px solid var(--line-2);
+  background: rgba(124,58,237,.12);
+  color: var(--text-1);
+}
+.badge.success { background: rgba(16,185,129,.12); border-color: rgba(16,185,129,.35); }
+.badge.warn    { background: rgba(245,158,11,.12); border-color: rgba(245,158,11,.35); }
+.badge.danger  { background: rgba(239,68,68,.12);  border-color: rgba(239,68,68,.35); }
+
+/* Pagination (docsify-pagination) ------------------------------------- */
+.docsify-pagination-container {
+  border-top: 1px solid var(--line-1);
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+}
+.pagination-item-label, .pagination-item-title { color: var(--text-2) !important; }
+.pagination-item:hover .pagination-item-label,
+.pagination-item:hover .pagination-item-title { color: var(--text-1) !important; }
+.pagination-item a {
+  border: 1px solid var(--line-2);
+  border-radius: var(--radius-md);
+  padding: .6rem .9rem;
+  background: var(--surface-1);
+  transition: border-color var(--t-fast) ease, transform var(--t-fast) ease;
+}
+.pagination-item a:hover { border-color: var(--brand-4); transform: translateY(-1px); }
+
+/* Tabs (docsify-tabs plugin) ------------------------------------------ */
+.docsify-tabs__content, .docsify-tabs__tab {
+  border-color: var(--line-1) !important;
+}
+.docsify-tabs__tab--active {
+  color: var(--text-1) !important;
+  border-bottom: 2px solid var(--brand) !important;
+}
+
+/* ToC (docsify-toc plugin or similar) --------------------------------- */
+.toc-nav, .page_toc {
+  background: var(--surface-1);
+  border: 1px solid var(--line-1);
+  border-radius: var(--radius-md);
+  padding: .75rem;
+  position: sticky;
+  top: 86px;
+  max-height: calc(100vh - 120px);
+  overflow: auto;
+}
+.toc-nav a, .page_toc a { color: var(--text-2) !important; }
+.toc-nav a:hover, .page_toc a:hover { color: var(--brand-4) !important; }
+
+/* Mermaid diagrams ----------------------------------------------------- */
+.mermaid {
+  background: var(--surface-1);
+  border: 1px solid var(--line-1);
+  border-radius: var(--radius-md);
+  padding: 16px;
+}
+
+/* Images --------------------------------------------------------------- */
+.markdown-section img {
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-1);
+}
+
+/* HRs */
+.markdown-section hr { border: none; height: 1px; background: var(--line-1) !important; }
+
+/* KBD keys */
+kbd {
+  background: var(--surface-2) !important;
+  color: var(--text-2) !important;
+  border: 1px solid var(--line-1) !important;
+  border-bottom: 2px solid var(--line-2) !important;
+  border-radius: 6px;
+  padding: 2px 6px;
+}
+
+/* GitHub corner */
+.github-corner svg {
+  fill: var(--brand) !important;
+  color: var(--surface-2) !important;
+}
+
+/* Progress (router progress bar) -------------------------------------- */
+.progress { background: var(--brand) !important; }
+
+/* Footer / global utilities ------------------------------------------- */
+.footer, .app-footer {
+  margin: 4rem 0 1rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line-1);
+  color: var(--text-3);
+}
+
+/* Focus ring utility for interactive elements */
+a:focus, button:focus, input:focus, .docsify-copy-code-button:focus {
+  outline: none; box-shadow: 0 0 0 3px rgba(155,77,255,.35);
+}
+
+/* Print tweaks --------------------------------------------------------- */
+@media print {
+  .sidebar, .app-nav, .github-corner, .docsify-pagination-container { display: none !important; }
+  body { background: #ffffff !important; color: #000 !important; }
+  .markdown-section a { color: #000 !important; text-decoration: underline; background: none; }
+  .markdown-section pre, .markdown-section code {
+    background: #f4f4f4 !important; color: #111 !important; border-color: #ddd !important;
+  }
+}
+
+/* Optional: wider content on xl screens -------------------------------- */
+@media (min-width: 1400px) {
+  :root { --content-max: 1180px; }
+}
+
+/* Optional: compact sidebar on small screens --------------------------- */
+@media (max-width: 860px) {
+  :root { --sidebar-w: 260px; }
+}
+/* ================================
+   Docsify — Contrast + Spacing Fix
+   ================================ */
+
+/* --- Palette adjustments (less “muddy” darks, more visible text) --- */
+:root {
+  --bg:          #0B0D13;    /* darker but cleaner */
+  --surface-1:   #151823;    /* sidebar background */
+  --surface-2:   #1C1F2C;    /* code blocks / panels */
+  --surface-3:   #10131C;    /* header/footer strips */
+  --text-1:      #F2F4FA;    /* main text brighter */
+  --text-2:      #C8CBD7;    /* secondary text */
+  --text-3:      #9EA5B8;    /* tertiary */
+  --border-color:#2A2E40;    /* sharper borders */
+  --brand:       #A855F7;    /* violet accent */
+  --brand-2:     #EC4899;    /* magenta accent */
+  --brand-grad: linear-gradient(135deg,var(--brand),var(--brand-2));
+}
+
+/* --- Base text + layout --- */
+body,
+.markdown-section {
+  color: var(--text-1) !important;
+  background: var(--bg) !important;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.markdown-section {
+  max-width: 1100px;
+  padding: 2rem 2rem;
+}
+
+/* --- Headings spacing & visibility --- */
+.markdown-section h1,
+.markdown-section h2,
+.markdown-section h3,
+.markdown-section h4 {
+  margin-top: 2.4rem;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+  color: var(--text-1) !important;
+  font-weight: 700;
+}
+.markdown-section h1 { font-size: 2rem; }
+.markdown-section h2 { font-size: 1.65rem; }
+.markdown-section h3 { font-size: 1.35rem; color: var(--brand) !important; }
+
+/* --- Paragraph & list spacing --- */
+.markdown-section p,
+.markdown-section ul,
+.markdown-section ol {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: var(--text-2);
+}
+
+/* --- Sidebar adjustments --- */
+.sidebar {
+  background: var(--surface-1) !important;
+  border-right: 1px solid var(--border-color);
+  font-size: 15px;
+  line-height: 1.6;
+}
+.sidebar ul li a {
+  color: var(--text-2) !important;
+  padding: 6px 12px;
+  display: block;
+}
+.sidebar ul li a:hover {
+  background: rgba(168,85,247,.1);
+  color: var(--text-1) !important;
+}
+.sidebar ul li.active > a {
+  background: rgba(236,72,153,.12);
+  color: var(--text-1) !important;
+}
+
+/* --- Search box improvements --- */
+input[type="search"] {
+  background: var(--surface-2) !important;
+  border: 1px solid var(--border-color);
+  color: var(--text-1);
+  padding: .5rem .75rem;
+  border-radius: 8px;
+}
+input[type="search"]::placeholder { color: var(--text-3); }
+
+/* --- Code blocks / inline code --- */
+.markdown-section code {
+  background: #222638 !important;
+  color: #F2F4FA !important;
+  border-radius: 6px;
+  padding: .15rem .4rem;
+  font-size: .9rem;
+}
+.markdown-section pre {
+  background: var(--surface-2) !important;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.markdown-section pre code {
+  background: transparent !important;
+  padding: 0;
+  font-size: .9rem;
+  line-height: 1.6;
+}
+
+/* --- Blockquotes --- */
+.markdown-section blockquote {
+  background: rgba(168,85,247,.08);
+  border-left: 4px solid var(--brand);
+  color: var(--text-2);
+  padding: 1rem 1.25rem;
+  margin: 2rem 0;
+  border-radius: 0 8px 8px 0;
+}
+
+/* --- Tables --- */
+.markdown-section table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+}
+.markdown-section th,
+.markdown-section td {
+  border: 1px solid var(--border-color);
+  padding: .6rem .8rem;
+}
+.markdown-section tr:nth-child(2n) {
+  background: var(--surface-3) !important;
+}
+
+/* --- Links --- */
+.markdown-section a {
+  color: var(--brand-2) !important;
+  text-decoration: underline;
+}
+.markdown-section a:hover {
+  color: var(--brand) !important;
+}
+
+/* --- Alerts / tips / warnings --- */
+.markdown-section p.tip {
+  background: rgba(168,85,247,.12);
+  border-left: 4px solid var(--brand);
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1.5rem 0;
+}
+.markdown-section p.warn {
+  background: rgba(245,158,11,.12);
+  border-left: 4px solid #F59E0B;
+}
+
+/* --- Images --- */
+.markdown-section img {
+  display: block;
+  max-width: 100%;
+  margin: 1.5rem auto;
+  border-radius: 8px;
+  box-shadow: 0 6px 14px rgba(0,0,0,.25);
+}
+
+/* --- Footer & spacing at bottom --- */
+.footer, .app-footer {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-color);
+  color: var(--text-3);
+}
+
+/* --- Focus rings for keyboard users --- */
+a:focus, button:focus, input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(168,85,247,.4);
+}
+
+/* --- Smooth spacing for headings & code --- */
+.markdown-section h1 + pre,
+.markdown-section h2 + pre,
+.markdown-section h3 + pre {
+  margin-top: .75rem;
+}
+/* ================================
+   Table Contrast + Spacing Fix
+   ================================ */
+
+/* Overall table container */
+.markdown-section table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  /* soften the borders */
+  border: 1px solid #222738;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,.2);
+  background: #121621; /* slightly lighter than your background */
+}
+
+/* Table headers */
+.markdown-section th {
+  background: #181d2b; /* dark but with a hint of blue */
+  color: #F3F5FA;
+  font-weight: 700;
+  padding: .8rem 1rem;
+  border-bottom: 1px solid #222738;
+  text-align: left;
+}
+
+/* Table cells */
+.markdown-section td {
+  background: #131926; /* dark but readable */
+  color: #CDD3E1;
+  padding: .75rem 1rem;
+  border-bottom: 1px solid #1F2535;
+  vertical-align: middle;
+}
+
+/* Alternate row shading */
+.markdown-section tr:nth-child(2n) td {
+  background: #151b2a; /* slightly lighter for zebra striping */
+}
+
+/* Hover state for rows */
+.markdown-section tbody tr:hover td {
+  background: #1B2133; /* subtle hover highlight */
+  color: #FFFFFF;
+}
+
+/* Table links */
+.markdown-section td a {
+  color: #C084FC; /* brand violet */
+  text-decoration: underline;
+}
+.markdown-section td a:hover {
+  color: #F472B6; /* brand pink hover */
+}
+
+/* Table header top border radius fix */
+.markdown-section table thead tr:first-child th:first-child {
+  border-top-left-radius: 8px;
+}
+.markdown-section table thead tr:first-child th:last-child {
+  border-top-right-radius: 8px;
+}
+
+/* Table notes or footers */
+.markdown-section table caption,
+.markdown-section tfoot td {
+  color: #9FA6BA;
+  font-size: .85rem;
+  padding-top: .5rem;
+}
+
+/* Optional: add subtle transition for hover */
+.markdown-section td,
+.markdown-section th {
+  transition: background .15s ease, color .15s ease;
+}
+/* ================================
+   Legend Lists / Inline Icons Fix
+   ================================ */
+
+/* General list spacing */
+.markdown-section ul {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  padding-left: 1.25rem;
+}
+
+/* Legend-specific: remove default bullets so we can control spacing */
+.markdown-section ul li img.align-left {
+  list-style: none;
+}
+
+/* Inline icons: uniform size and spacing */
+.markdown-section img.align-left {
+  display: inline-block;
+  max-height: 24px;       /* adjust for your icon size */
+  width: auto;
+  vertical-align: middle; /* align with text baseline */
+  margin-left: 8px;       /* space after text */
+  margin-right: 4px;
+  position: relative;
+  top: -1px; /* subtle nudge to center */
+}
+
+/* Legend list items: more line-height & spacing */
+.markdown-section li {
+  line-height: 1.8;       /* better breathing room */
+  margin-bottom: .6rem;   /* space between bullet lines */
+}
+
+/* If you want icons at the start of the line instead of end: */
+.markdown-section .legend-list li {
+  list-style: none;
+  padding-left: 0;
+  position: relative;
+}
+.markdown-section .legend-list li img.align-left {
+  margin-right: 8px;
+  margin-left: 0;
+}
+
+/* Optional: highlight the legend header */
+.markdown-section strong + img.align-left {
+  margin-left: 8px; /* ensures spacing after bold label */
+}
+
+</style>
 </head>
 <body>
   <div id="app"></div>

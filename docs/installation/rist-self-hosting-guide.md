@@ -1,24 +1,24 @@
-﻿[ﾂｶ] Self-Hosted RIST Relay Documentation
+Self-Hosted RIST Relay Documentation
 ========================================
 
-[ﾂｶ][1] Docker
+[1] Docker
 =============
 
 [https://github.com/moo-the-cow/docker-streaming]
 
-[ﾂｶ][2] requirements
+[2] requirements
 -------------------
 
 works on both arm64 (raspberry pi/orange pi/radxa) and normal linux distros like ubuntu amd64
 
-[ﾂｶ][3] setup
+[3] setup
 ------------
 
 `git clone https://github.com/moo-the-cow/docker-streaming`  
 change the configs `.env` accordingly to your needs the DEFAULTS WONT WORK!  
 `docker compose up -d`
 
-[ﾂｶ][4] Noalbs integration
+[4] Noalbs integration
 -------------------------
 
 ![image.png]  
@@ -62,7 +62,7 @@ Copy
 
 This is using the internal ports, if you want to access the stats differently use the LEFT part (host port)
 
-[ﾂｶ][5] Essential for streaming (needs port forwarding to the container)
+[5] Essential for streaming (needs port forwarding to the container)
 -----------------------------------------------------------------------
 
 moo-rist: 2030 udp (RIST stream access: for example irlbox or moblin)  
@@ -74,7 +74,7 @@ moo-rist-stats: 8682 tcp (for the websocket stats)
 
 TLDR: left side port is if you want to access the container from anywhere (host port) take this into account when doing port forwarding and firewall setup
 
-[ﾂｶ][6] OBS setup
+[6] OBS setup
 ----------------
 
 - Open OBS and create a **Media Source**.
@@ -88,15 +88,15 @@ TLDR: left side port is if you want to access the container from anywhere (host 
 
   - Set the input format to: **mpegts**.
 
-[ﾂｶ][7] Description
+[7] Description
 ------------------
 
 So how does it work? So its different to the old selfhosting, you don't need to directly SEND the stream to OBS, but you can just "request" the stream FROM OBS to the relay.
 
-[ﾂｶ][8] Native
+[8] Native
 =============
 
-[ﾂｶ][9] Download Links
+[9] Download Links
 ---------------------
 
 - **Windows:** [Download v.0.0.9]
@@ -104,7 +104,7 @@ So how does it work? So its different to the old selfhosting, you don't need to 
 - **Linux arm64 (like raspberry, orangepi, radxa):** [Download v.0.0.9][11]
 - **MacOS 10.15 or higher:** on demand - ask on irltools discord
 
-### [ﾂｶ][12] Configuration
+### [12] Configuration
 
 After downloading and extracting the archive, configure your settings:
 
@@ -131,35 +131,35 @@ Copy
 > 笞 **Information:** This is for developers or technical people only. We cannot assist with port forwarding or specific hardware configurations.  
 > We offer relay hosting services at [IRLhosting.com].
 
-[ﾂｶ][13] Features & Status
+[13] Features & Status
 -------------------------
 
-### [ﾂｶ][14] 1. **RIST Relay Functionality**
+### [14] 1. **RIST Relay Functionality**
 
 - Listens on an incoming UDP port for RIST streams.
 - Relays or forwards streams as specified (depending on configuration).
 
-### [ﾂｶ][15] 2. **REST API**
+### [15] 2. **REST API**
 
 - Basic stats: `http://localhost:5000/api/Rist/stats`
 - Small auto-generated UI: `http://localhost:5000/rest/index.html`
 
-### [ﾂｶ][16] 3. **Logging & Stats**
+### [16] 3. **Logging & Stats**
 
 - **Windows:** Logs are displayed in a console window.
 - **Linux:** Logs are shown in the terminal. REST API endpoints provide detailed stats.
 
-### [ﾂｶ][17] 4. **Exit Behavior**
+### [17] 4. **Exit Behavior**
 
 - Older versions: Any keypress exits the program.
 - Newer versions: Press **Q** to exit.
 
-### [ﾂｶ][18] 5. **Ports & Firewall**
+### [18] 5. **Ports & Firewall**
 
 - **Windows:** Prompts "Allow app through firewall" on first run.
 - **Linux:** Open required ports via `ufw` or `iptables`.
 
-[ﾂｶ][19] Installation Steps (Windows)
+[19] Installation Steps (Windows)
 ------------------------------------
 
 1.  **Download and Extract**
@@ -217,14 +217,14 @@ Copy
 
     - Set the input format to: **mpegts**.
 
-[ﾂｶ][20] Installation Steps (Linux)
+[20] Installation Steps (Linux)
 ----------------------------------
 
-### [ﾂｶ][21] Required Distro
+### [21] Required Distro
 
 ubuntu 24.04 LTS - until further notice when debian is finally getting up2date. bookworm still quite behind all versions
 
-### [ﾂｶ][22] Required Software
+### [22] Required Software
 
 ``` bash
 sudo apt install libcjson-dev libmicrohttpd12t64 libmbedtls-dev libmbedcrypto7t64 -y
@@ -301,7 +301,7 @@ Copy
 
     - Set the input format to: **mpegts**.
 
-### [ﾂｶ][23] (optional) create service for automatic startup
+### [23] (optional) create service for automatic startup
 
 ``` none
 [Unit]
@@ -320,12 +320,12 @@ WantedBy=multi-user.target
 
 Copy
 
-[ﾂｶ][24] Installation Steps (Linux arm64)
+[24] Installation Steps (Linux arm64)
 ----------------------------------------
 
 Same setup as the normal Linux installation, but you need to take care of the output folder name yourself. The shell script has been adapted.
 
-[ﾂｶ][25] Installation Steps (Mac OS)
+[25] Installation Steps (Mac OS)
 -----------------------------------
 
 Same setup as the normal Linux installation, but you need to take care of the output folder name yourself. The shell script has been adapted.  
@@ -339,7 +339,7 @@ brew install libmicrohttpd
 
 Copy
 
-[ﾂｶ][26] Common Issues & Troubleshooting
+[26] Common Issues & Troubleshooting
 ---------------------------------------
 
 1.  **Firewall not allowing traffic?**
@@ -363,21 +363,20 @@ Copy
 
     - Use a newer version where only **Q** stops it.
 
-[ﾂｶ][27] Client
+[27] Client
 --------------
 
 Protocol: RIST  
 Receiver address: ip of the rist selfhosting  
 Receiver port: 2030
 
-[ﾂｶ][28] Disclaimer
+[28] Disclaimer
 ------------------
 
 - Provided "as is." Minimal support.
 - Follow local networking laws.
 - Not for commercial resale.
 
-  [ﾂｶ]: https://www.irlbox.com/#self-hosted-rist-relay-documentation
   [1]: https://www.irlbox.com/#docker
   [https://github.com/moo-the-cow/docker-streaming]: https://github.com/moo-the-cow/docker-streaming
   [2]: https://www.irlbox.com/#requirements

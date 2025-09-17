@@ -1,9 +1,9 @@
-﻿[ﾂｶ] IRLbox Installation Instructions
+IRLbox Installation Instructions
 ====================================
 
 Welcome to the IRLbox installation guide. These instructions will help you set up IRLbox on your compatible device.
 
-[ﾂｶ][1] Compatible Devices
+[1] Compatible Devices
 -------------------------
 
 - Orange Pi 3B
@@ -14,7 +14,7 @@ Welcome to the IRLbox installation guide. These instructions will help you set u
 - Radxa Rock 5B+
 - Radxa Zero 3W/E
 
-[ﾂｶ][2] Prerequisites
+[2] Prerequisites
 --------------------
 
 Before you begin, ensure you have the following:
@@ -29,7 +29,7 @@ Before you begin, ensure you have the following:
   - **macOS:** [Raspberry Pi Imager] or [Balena Etcher]
 - An Ethernet cable to connect your SBC to the same home network your computer or phone is connected to (for initial configuration).
 
-[ﾂｶ][3] Important Notice
+[3] Important Notice
 -----------------------
 
 By downloading and using the IRLbox images, you are agreeing to participate in our beta testing program. Please be aware:
@@ -40,7 +40,7 @@ By downloading and using the IRLbox images, you are agreeing to participate in o
 - Be patient! We窶决e a small team working to improve IRLbox quickly and effectively.
 - Share your experience 窶・we need detailed feedback to fix issues and improve features.
 
-[ﾂｶ][4] 1. Download the IRLbox Image File
+[4] 1. Download the IRLbox Image File
 ----------------------------------------
 
 | Board Model | Beta Release | Dev Release | Version | Distro / Kernel | sha1 checksum |
@@ -53,7 +53,7 @@ By downloading and using the IRLbox images, you are agreeing to participate in o
 | Radxa Rock 5A | "Switchable" From Dev 竊・| [Download][9] | 0.0.25 | Ubuntu 24.04 / Kernel 6.1 | d29e663fa5449ca958cfdd79a22470fce897f63e |
 | Radxa Rock 5B+ | "Switchable" From Dev 竊・| [Download][10] | 0.0.9 | Ubuntu 24.04 / Kernel 6.1 | 93205cd2505940fd4c3b23abfa524f2106c4ac36 |
 
-[ﾂｶ][11] 2. Flash the Image
+[11] 2. Flash the Image
 --------------------------
 
 **Windows (Rufus / Balena Etcher):**
@@ -69,12 +69,12 @@ By downloading and using the IRLbox images, you are agreeing to participate in o
 
 1.  Download, install, and open [Raspberry Pi Imager] or [Balena Etcher].
 2.  Insert your microSD card into your card reader.
-3.  In Raspberry Pi Imager, click "Choose OS" 竊・"Use custom" and select your IRLbox image file.
+3.  In Raspberry Pi Imager, click "Choose OS" and select "Use custom" and then select your IRLbox image file.
 4.  Click "Choose Storage" and select your microSD card.
 5.  Click "Write" to start.
 6.  When finished, safely eject the card.
 
-[ﾂｶ][12] 笞・・2.5 Alternative Flash on Linux 笞・・
+[12] ⚠️ 2.5 Alternative Flash on Linux ⚠️・
 --------------------------------------------
 
 ADVANCED TECH SKILLY ONLY!
@@ -87,7 +87,7 @@ bmaptool copy --nobmap [IMAGENAME].img /dev/sdX
 
 Copy
 
-笞・・double check if you are really flashing the correct disk drive!! 笞・什ou have been warned! 笞・・ 
+⚠️ double check if you are really flashing the correct disk drive!! ⚠️ you have been warned! ⚠️ 
 after you wrote it to your sdcard you will have to "write the GPT" because the size changed.
 
 ``` none
@@ -98,7 +98,7 @@ Copy
 
 simply type `w` to write the GPT and then you can use it
 
-[ﾂｶ][13] 笞・・2.6 Alternative Flash on MacOS 笞・・
+[13] ⚠️ 2.6 Alternative Flash on MacOS ⚠️・
 --------------------------------------------
 
 ADVANCED TECH SKILLY ONLY!
@@ -127,19 +127,19 @@ simply type `w` to write the GPT and then you can use it
 笞・・double check if you are really flashing the correct disk drive!! 笞・什ou have been warned! 笞・・ 
 So this really requires you NOT to unmount via UI rdisk is the "real" disk drive
 
-[ﾂｶ][14] 3. Boot Your Device
+[14] 3. Boot Your Device
 ---------------------------
 
 1.  Insert the flashed microSD card into your SBC.
 2.  Connect the power supply.
 3.  Wait 3窶・0 minutes for first boot disk expansion to complete.
 
-[ﾂｶ][15] Connect to Your Local Network
+[15] Connect to Your Local Network
 -------------------------------------
 
 Connect your device to your router with an Ethernet cable.
 
-[ﾂｶ][16] Access IRLbox
+[16] Access IRLbox
 ---------------------
 
 Open a browser on a device in the same network and go to:
@@ -147,12 +147,12 @@ Open a browser on a device in the same network and go to:
 - `http://irlbox.local/`
 - If that doesn窶冲 work, try `http://irlbox/`
 
-[ﾂｶ][17] Advanced Configuration
+[17] Advanced Configuration
 ------------------------------
 
 Once inside the IRLbox dashboard, you can adjust stream quality, encoder settings, storage, and more.
 
-[ﾂｶ][18] Troubleshooting
+[18] Troubleshooting
 -----------------------
 
 If you cannot access the dashboard:
@@ -161,12 +161,11 @@ If you cannot access the dashboard:
 - Confirm your device has powered on fully.
 - Consult the IRLbox FAQ or support channels.
 
-[ﾂｶ][19] Feedback
+[19] Feedback
 ----------------
 
 We welcome your bug reports, suggestions, and experiences. Your input helps improve IRLbox for everyone.
 
-  [ﾂｶ]: https://irlbox.com/#irlbox-installation-instructions
   [1]: https://irlbox.com/#compatible-devices
   [2]: https://irlbox.com/#prerequisites
   [Rufus]: https://rufus.ie/

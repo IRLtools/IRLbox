@@ -1,4 +1,4 @@
-﻿[ﾂｶ] Recommended Equipment for IRLbox
+Recommended Equipment for IRLbox
 ====================================
 
 **We've tested a variety of equipment to maintain and ensure stability, performance, and compatibility with IRLbox.**
@@ -19,7 +19,7 @@ Many devices *not listed here* may also be compatible.**
 
 ***Links \* for devices on Amazon may earn commission that helps maintain this website. - @SPVCEMVN***
 
-[ﾂｶ][1] Cellular Modems
+[1] Cellular Modems
 ----------------------
 
 All modems listed are "Global" capable, unless noted otherwise.
@@ -46,7 +46,7 @@ All modems listed are "Global" capable, unless noted otherwise.
 
 > [Cellular Band Information]
 
-[ﾂｶ][12] WiFi Modules
+[12] WiFi Modules
 --------------------
 
 | Model | Type | Compatibility | Purchase Link |
@@ -82,7 +82,7 @@ All modems listed are "Global" capable, unless noted otherwise.
 > > **M.2 (NGFF) wifi modules are *only* compatible with Rock 5A, Orange Pi 5 Plus, and other *supported* SBCs with an M.2 "E-Key" Slot.**  
 > > Additionally, Intel modules are not recommended for creating an access point (AP) or "hotspot".
 
-[ﾂｶ][29] Cameras
+[29] Cameras
 ---------------
 
 | Cameras | Supported Modes | Compatibility | Purchase Link | Notes |
@@ -96,21 +96,21 @@ All modems listed are "Global" capable, unless noted otherwise.
 | Sony HDR-AS300 | HDMI | <img src="/docs/assets/0faad45f973f2cf62bf433140a30e833a8c2ceb0.png" class="align-center" alt="green_check_32px.png" /> |  |  |
 | Sony HDR-AS200V | HDMI | <img src="/docs/assets/0faad45f973f2cf62bf433140a30e833a8c2ceb0.png" class="align-center" alt="green_check_32px.png" /> |  | Bad stabilization |
 
-[ﾂｶ][36] Cables
+[36] Cables
 --------------
 
 | Cables | Type | Purchase Link |
 |--------|------|---------------|
 |        |      |               |
 
-[ﾂｶ][37] Cases for IRLbox
+[37] Cases for IRLbox
 ------------------------
 
 | Cases for IRLbox | Compatibility | Purchase Link |
 |------------------|---------------|---------------|
 |                  |               |               |
 
-[ﾂｶ][38] Powerbank / Batteries
+[38] Powerbank / Batteries
 -----------------------------
 
 | Powerbank / Batteries  | Capacity | Purchase Link  |
@@ -122,14 +122,13 @@ All modems listed are "Global" capable, unless noted otherwise.
 | UGREEN Nexode 25000mah | 90wh     | [Amazon\*][43] |
 | Anker 737 24000mah     | 86wh     | [Amazon\*][44] |
 
-[ﾂｶ][45] Powered USB Hubs
+[45] Powered USB Hubs
 ------------------------
 
 | Powered USB Hubs | Output Ports | Input Ports | Power Supply | Purchase Link | Notes |
 |----|----|----|----|----|----|
 | Logilink UA0085 | 4x USB 2.0 | DC plug, USB-B | 5V 2A |  | 5V input goes straight to the Ports, higher current can be used at own risk. |
 
-  [ﾂｶ]: https://irlbox.com/#recommended-equipment-for-irlbox
   [1]: https://irlbox.com/#cellular-modems
   [AliExpress]: https://www.aliexpress.us/item/3256806152587509.html
   [2]: https://www.aliexpress.us/item/3256807443329160.html

@@ -1,4 +1,4 @@
-﻿[ﾂｶ] List of Cellular Bands Used by Most Major Carriers
+List of Cellular Bands Used by Most Major Carriers
 ======================================================
 
 | Country | Carrier | 4G (LTE) Bands | 5G (NR) Bands |
@@ -43,5 +43,4 @@
 | South Africa | Cell C | B1, B3, B7, B20 | N78 |
 | South Africa | Telkom | B3, B20, B40 | N78 |
 
-  [ﾂｶ]: https://irlbox.com/#list-of-cellular-bands-used-by-most-major-carriers
 
