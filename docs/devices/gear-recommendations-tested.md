@@ -44,7 +44,7 @@ All modems listed are "Global" capable, unless noted otherwise.
 >
 > > **"M.2" (NGFF) cellullar modules are *only* supported when used with an appropriate *"USB cellular carrier board"* as these modules use the M.2 "B-Key" standard which is not supported directly on the compatible SBCs. They also require the use of external antennas which are generally not provided. `This is for the more *tech-savvy* individuals.`**
 
-> [Cellular Band Information]
+> [Cellular Band Information](https://irlbox.com/#/docs/devices/cellular_band_info)
 
 [12] WiFi Modules
 --------------------
