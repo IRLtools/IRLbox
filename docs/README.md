@@ -34,7 +34,7 @@ Run it on small, affordable boards and unlock features normally found only in hi
 ## Screenshot Placeholders
 
 > 📸 **Dashboard Overview Screenshot** 
-![IRLbox Dashboard](./assets/irlboxUI.png) 
+![IRLbox Dashboard](./docs/assets/irlboxUI.png) 
 > 📸 **Feature Settings Screenshot**  
 > 📸 **Streaming Status Screenshot**
 
