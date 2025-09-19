@@ -16,8 +16,6 @@ irlbox-docs/
 │  └ troubleshooting/
 ├ docs/assets/
 ├ index.html
-└ tools/
-   └ migrate.ps1
 ```
 
 
