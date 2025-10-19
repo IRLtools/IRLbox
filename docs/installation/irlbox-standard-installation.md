@@ -47,7 +47,7 @@ Choose the image matching your board:
 
 | Board Model | Version | Distro / Kernel | Download Link | SHA1 Checksum |
 |-------------|---------|-----------------|---------------|---------------|
-| Orange Pi 5 Plus | 0.0.27 | Ubuntu 24.04 / Custom Kernel 6.1 | [Download](https://drive.google.com/file/d/1wo3UqMbkDFSYRkjEZ3MSUQbLqN8Uo_Gz/view?usp=drive_link) | `fb2a46596dcd25aa80901f7f5f82fc727efb9573` |
+| Orange Pi 5 Plus | 0.0.28 | Ubuntu 24.04 / Custom Kernel 6.1 | [Download](https://drive.google.com/file/d/1AOXBthmli6iMczP2psVk5e8bLlDyLX5U/view?usp=drive_link) | `8f11896d4dc20fe2b8d259061d099d0194b55f96` |
 | Orange Pi 5 | 0.0.26 | Ubuntu 24.04 / Custom Kernel 6.1 | [Download](https://drive.google.com/file/d/1yBf_oXOCLAHnRvoC2Om4JuV9cMN6fpz9/view?usp=drive_link) | `edf980269ddf8cef15908a7a120645030d2a8043` |
 | Orange Pi 3B | 0.0.26 | Ubuntu 24.04 / Custom Kernel 6.1 | [Download](https://drive.google.com/file/d/1Ambt_DBVdhs-saXT3hu6Qv6TZKikgJB_/view?usp=drive_link) | `539c5fc91b6459264dab0d02d35975b026b7883c` |
 | Orange Pi 5 Ultra | 0.0.8 | Ubuntu 22.04 / Kernel 6.1 | [Download](https://drive.google.com/file/d/1jb3nBhcCtyXaObCIBGhQ2Ua3gfu-_u6n/view?usp=drive_link) | `2bed2a64a27a95857b1e401dea065717caaacb8f` |
