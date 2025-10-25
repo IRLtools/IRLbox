@@ -31,35 +31,25 @@ This guide explains how to set up IRLbox on your compatible device using standar
 
 ---
 
-## 3. Important Notice (Beta)
-
-> 💡 **Beta Program Notice**  
-> By downloading and using IRLbox images you agree to our beta program:  
-> - IRLbox is in **beta** – features may break or behave unexpectedly.  
-> - Some functions may be unstable or missing.  
-> - We rely on your feedback to improve IRLbox quickly.
-
----
-
-## 4. Download the IRLbox Image File
+## 3. Download the IRLbox Image File
 
 Choose the image matching your board:
 
 | Board Model | Version | Distro / Kernel | Download Link | SHA1 Checksum |
 |-------------|---------|-----------------|---------------|---------------|
-| Orange Pi 5 Plus | 0.0.28 | Ubuntu 24.04 / Custom Kernel 6.1 | [Download](https://drive.google.com/file/d/1AOXBthmli6iMczP2psVk5e8bLlDyLX5U/view?usp=drive_link) | `8f11896d4dc20fe2b8d259061d099d0194b55f96` |
-| Orange Pi 5 | 0.0.26 | Ubuntu 24.04 / Custom Kernel 6.1 | [Download](https://drive.google.com/file/d/1yBf_oXOCLAHnRvoC2Om4JuV9cMN6fpz9/view?usp=drive_link) | `edf980269ddf8cef15908a7a120645030d2a8043` |
-| Orange Pi 3B | 0.0.26 | Ubuntu 24.04 / Custom Kernel 6.1 | [Download](https://drive.google.com/file/d/1Ambt_DBVdhs-saXT3hu6Qv6TZKikgJB_/view?usp=drive_link) | `539c5fc91b6459264dab0d02d35975b026b7883c` |
-| Orange Pi 5 Ultra | 0.0.8 | Ubuntu 22.04 / Kernel 6.1 | [Download](https://drive.google.com/file/d/1jb3nBhcCtyXaObCIBGhQ2Ua3gfu-_u6n/view?usp=drive_link) | `2bed2a64a27a95857b1e401dea065717caaacb8f` |
-| Radxa Zero 3W/E | 0.0.29 | Ubuntu 24.04 / Custom Kernel 6.1 | [Download](https://drive.google.com/file/d/1RrHtfprhEQDSct0ILpgoqX4poJuwHQW4/view?usp=drive_link) | `51339a9c84a2560fc74e34f375d003ae6c519dec` |
-| Radxa Rock 5A | 0.0.26 | Ubuntu 24.04 / Custom Kernel 6.1 | [Download](https://drive.google.com/file/d/1xQJnzPOxcSX_bGz4w1dCHdSX28PWyKJR/view?usp=drive_link) | `7386743093256b80dc395d661454bcccd76788f1` |
-| Radxa Rock 5B+ | 0.0.11 | Ubuntu 24.04 / Custom Kernel 6.1 | [Download](https://drive.google.com/file/d/1_kOXvp0gEUeBlc9xeP_90JkIOcQgS4ID/view?usp=drive_link) | `614586a191455a8612d08ad0edea2a6542546287` |
+| Orange Pi 5 Plus | 1.0.0 | Ubuntu 24.04 / Custom Kernel 6.1 | [Download](https://drive.google.com/file/d/1R7w8meV073Jf6bGvWJIamoMVAd0NCV0e/view?usp=drive_link) | `5a5225885c2ed6c5cbe73ca74b7835d10f2283e7cf6a37cda07679a7777cbea5` |
+| Orange Pi 5 | 1.0.0 | Ubuntu 24.04 / Custom Kernel 6.1 | [Download](https://drive.google.com/file/d/1cDl7SGykUk1WfzkWsQDNWxJG6tuvfk8w/view?usp=drive_link) | `a3fd9bd84ba66e87621ef6eb860c5203c4ba98b328dabb71ca6ed5901d03c4b8` |
+| Orange Pi 3B | 1.0.0 | Ubuntu 24.04 / Custom Kernel 6.1 | [Download](https://drive.google.com/file/d/1I9bjmUlktuH1oMEsdi0w2tcP3c1S22Z5/view?usp=drive_link) | `b3c25f7030e52499b31509b7a41807f3ff2ffd542b45b584a9761f351ce7ea95` |
+| Orange Pi 5 Ultra | 1.0.0 | Ubuntu 22.04 / Kernel 6.1 | [Download](https://drive.google.com/file/d/1q3bXUFItke-DQ8VyUhDRWsM_AQVr1xzN/view?usp=drive_link) | `81cdde71c45eb409ea1ad67397df15544a63c3a34c8fe39e1e29be0cfdbb2409` |
+| Radxa Zero 3W/E | 1.0.0 | Ubuntu 24.04 / Custom Kernel 6.1 | [Download](https://drive.google.com/file/d/1SX2n7uOZ2-UWMKBdt5CPhYTjr87mUD-4/view?usp=drive_link) | `20e39f084d0f97842422f2bb1827db48d6f738cd68e6e40a11e10fa6f6a3c99e` |
+| Radxa Rock 5A | 1.0.0 | Ubuntu 24.04 / Custom Kernel 6.1 | [Download](https://drive.google.com/file/d/1bExTRmSk0OFnZP6zIMxXDjzwsrSH2Ory/view?usp=drive_link) | `208bbf6389fe042cec16af28eca2d64873ee4a300a0131ec4a6f6ed95bb53dbc` |
+| Radxa Rock 5B+ | 1.0.0 | Ubuntu 24.04 / Custom Kernel 6.1 | [Download](https://drive.google.com/file/d/1DEfocfGhFtessYeSZlViFmLn1fiDDAet/view?usp=drive_link) | `fdf225050991c77bb360c2216caa9e88dfa0d1849bcfe7908265406f987c60db` |
 
 > 📸 **Screenshot Placeholder:** Show download page with highlighted board selection.
 
 ---
 
-## 5. Flash the Image (Windows)
+## 4. Flash the Image (Windows)
 
 1. **Install flashing software:**
    - Download and install [Rufus](https://rufus.ie/) or [Balena Etcher](https://etcher.balena.io/)
@@ -83,7 +73,7 @@ Choose the image matching your board:
 
 ---
 
-## 6. Flash the Image (macOS)
+## 5. Flash the Image (macOS)
 
 1. **Install flashing software:**
    - Download and install [Raspberry Pi Imager](https://www.raspberrypi.com/software/) or [Balena Etcher](https://etcher.balena.io/)
@@ -107,7 +97,7 @@ Choose the image matching your board:
 
 ---
 
-## 7. Boot Your Device
+## 6. Boot Your Device
 
 1. **Insert the microSD card:**
    - Insert the flashed microSD card into your SBC
@@ -124,7 +114,7 @@ Choose the image matching your board:
 
 ---
 
-## 8. Connect to Your Local Network
+## 7. Connect to Your Local Network
 
 1. **Use Ethernet connection:**
    - Connect an Ethernet cable from your SBC to your router
@@ -135,7 +125,7 @@ Choose the image matching your board:
 
 ---
 
-## 9. Access the IRLbox Dashboard
+## 8. Access the IRLbox Dashboard
 
 1. **Open your web browser:**
    - Use any device connected to the same network
@@ -155,7 +145,7 @@ Choose the image matching your board:
 
 ---
 
-## 10. Initial Setup
+## 9. Initial Setup
 
 Once you access the dashboard:
 
@@ -167,7 +157,7 @@ Once you access the dashboard:
 
 ---
 
-## 11. Troubleshooting
+## 10. Troubleshooting
 
 | Problem | Solution |
 |---------|----------|
@@ -178,7 +168,7 @@ Once you access the dashboard:
 
 ---
 
-## 12. Next Steps
+## 11. Next Steps
 
 - **Configure streaming:** Set up your streaming platforms and keys
 - **Test connectivity:** Verify your internet upload speeds
@@ -187,7 +177,7 @@ Once you access the dashboard:
 
 ---
 
-## 13. Feedback & Support
+## 12. Feedback & Support
 
 We welcome your feedback to improve IRLbox:
 
