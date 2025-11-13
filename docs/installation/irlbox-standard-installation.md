@@ -43,7 +43,7 @@ Choose the image matching your board:
 | Orange Pi 5 Ultra | 1.0.0 | Ubuntu 22.04 / Kernel 6.1 | [Download](https://drive.google.com/file/d/1q3bXUFItke-DQ8VyUhDRWsM_AQVr1xzN/view?usp=drive_link) | `81cdde71c45eb409ea1ad67397df15544a63c3a34c8fe39e1e29be0cfdbb2409` |
 | Radxa Zero 3W/E | 1.0.0 | Ubuntu 24.04 / Custom Kernel 6.1 | [Download](https://drive.google.com/file/d/1SX2n7uOZ2-UWMKBdt5CPhYTjr87mUD-4/view?usp=drive_link) | `20e39f084d0f97842422f2bb1827db48d6f738cd68e6e40a11e10fa6f6a3c99e` |
 | Radxa Rock 5A | 1.0.0 | Ubuntu 24.04 / Custom Kernel 6.1 | [Download](https://drive.google.com/file/d/1bExTRmSk0OFnZP6zIMxXDjzwsrSH2Ory/view?usp=drive_link) | `208bbf6389fe042cec16af28eca2d64873ee4a300a0131ec4a6f6ed95bb53dbc` |
-| Radxa Rock 5B+ | 1.0.0 | Ubuntu 24.04 / Custom Kernel 6.1 | [Download](https://drive.google.com/file/d/1DEfocfGhFtessYeSZlViFmLn1fiDDAet/view?usp=drive_link) | `fdf225050991c77bb360c2216caa9e88dfa0d1849bcfe7908265406f987c60db` |
+| Radxa Rock 5B+ | 1.0.1 | Ubuntu 24.04 / Custom Kernel 6.1 | [Download](https://drive.google.com/file/d/1OZYA5wEatherYxChmiJY_eeVEk9hXlMF/view?usp=drive_link) | `cc984958ee3ace4f9759f315dea902220b6a54e5` |
 
 > 📸 **Screenshot Placeholder:** Show download page with highlighted board selection.
 
