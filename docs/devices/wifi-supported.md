@@ -4,9 +4,7 @@ This list includes hardware tested for compatibility with Wi-Fi modes (2.4GHz, 5
 
 ---
 
-## Orange Pi 5+
-
-### M.2
+## M.2
 | Model                        | 2.4GHz | 5GHz | AP 2.4GHz | AP 5GHz |
 |------------------------------|:------:|:----:|:---------:|:-------:|
 | Wi-Fi 6 AX200 (AC200NGW)     |   ✅   |  ✅  |     ✅    |    ❌    |
@@ -14,7 +12,7 @@ This list includes hardware tested for compatibility with Wi-Fi modes (2.4GHz, 5
 | SparkLAN WNFT-238AX (RTL8852BE) | ✅   |  ✅  |     ✅    |    ❌    |
 | Intel Dual Band AC 8265 (8265NGW) | ✅   |  ✅  |     ✅    |    ❌    |
 
-### USB
+## USB
 | Model                        | 2.4GHz | 5GHz | AP 2.4GHz | AP 5GHz |
 |------------------------------|:------:|:----:|:---------:|:-------:|
 | Archer T2U Nano (TP-Link AC600) | ✅   |  ✅  |     ✅    |    ✅    |
@@ -27,10 +25,11 @@ This list includes hardware tested for compatibility with Wi-Fi modes (2.4GHz, 5
 
 ---
 
-## Orange Pi 3B
+## Onboard
+### Orange Pi 3B
 | Onboard Wi-Fi                | 2.4GHz | 5GHz | AP 2.4GHz | AP 5GHz |
 |------------------------------|:------:|:----:|:---------:|:-------:|
-| Onboard Wi-Fi                |   ❌   |  ❌  |     ❌    |    ❌    |
+| Onboard Wi-Fi                |   ✅   |  ✅  |     ❌    |    ❌    |
 
 ---
 
