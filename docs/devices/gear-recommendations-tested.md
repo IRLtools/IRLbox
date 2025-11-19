@@ -87,9 +87,9 @@ All modems listed are "Global" capable, unless noted otherwise.
 [3] USB Modem Sticks (Huwei, etc.)
 --------------------
 
-# USB Modem/Internet/Surf Sticks (Huawei, ZTE)
+### USB Modem/Internet/Surf Sticks (Huawei, ZTE)
 
-## Huawei E8372h-320
+#### Huawei E8372h-320
  |  Spec/Feature         | Details                                                                 |
  |----------------------|-------------------------------------------------------------------------|
  | **Supported Bands**  | LTE FDD: B1/B3/B5/B7/B8/B20/B28 (800/900/1800/2100/2600 MHz)          |
@@ -101,7 +101,7 @@ All modems listed are "Global" capable, unless noted otherwise.
 
 ---
 
-## Huawei E3372h-153
+#### Huawei E3372h-153
  | Spec/Feature         | Details                                                                 |
  |----------------------|-------------------------------------------------------------------------|
  | **Supported Bands**  | LTE FDD: B1/B3/B7/B8/B20/B28 (800/900/1800/2100/2600 MHz)              |
@@ -113,7 +113,7 @@ All modems listed are "Global" capable, unless noted otherwise.
 
 ---
 
-## Huawei E3327s-153
+#### Huawei E3327s-153
  | Spec/Feature         | Details                                                                 |
  |----------------------|-------------------------------------------------------------------------|
  | **Supported Bands**  | LTE FDD: B1/B3/B7/B8/B20 (800/900/1800/2100/2600 MHz)                   |
@@ -125,7 +125,7 @@ All modems listed are "Global" capable, unless noted otherwise.
 
 ---
 
-## Huawei MS2372h-607 (Japanese)
+#### Huawei MS2372h-607 (Japanese)
  | Spec/Feature         | Details                                                                 |
  |----------------------|-------------------------------------------------------------------------|
  | **Supported Bands**  | LTE FDD: B1/B3/B7/B8/B19/B28; LTE TDD: B40 (2300 MHz)                   |
@@ -137,7 +137,7 @@ All modems listed are "Global" capable, unless noted otherwise.
 
 ---
 
-## ZTE MF79U
+#### ZTE MF79U
  | Spec/Feature         | Details                                                                 |
  |----------------------|-------------------------------------------------------------------------|
  | **Supported Bands**  | LTE FDD: B1/B3/B5/B7/B8/B20 (800/900/1800/2100/2600 MHz); TDD: B38      |
@@ -149,25 +149,25 @@ All modems listed are "Global" capable, unless noted otherwise.
 
 ---
 
-## Analysis and Recommendations
+#### Analysis and Recommendations
 
-### Strengths
+##### Strengths
 - **Huawei E8372h-320**: Best for users needing both USB modem and Wi-Fi hotspot functionality. Supports a wide range of LTE bands and external antennas for improved signal.
 - **Huawei E3372h-153**: Compact and reliable for direct USB modem use, with external antenna support.
 - **Huawei MS2372h-607**: Industrial-grade, robust for M2M applications, supports AT commands, and has a wide temperature range.
 - **ZTE MF79U**: Unique for its built-in Wi-Fi hotspot, making it versatile for multiple devices.
 
-### Weaknesses
+##### Weaknesses
 - **Power Usage**: All are USB-powered, which may limit performance if the host device cannot supply sufficient power (e.g., weak USB ports).
 - **Signal Strength**: While external antenna ports are available, signal quality depends on the environment and network coverage.
 - **Heat**: Industrial models like MS2372h-607 require good ventilation at high temperatures.
 
-### Recommendations
+##### Recommendations
 - **For Streaming/High Data Usage**: Huawei E8372h-320 or ZTE MF79U (due to Wi-Fi hotspot and external antenna support).
 - **For Industrial/Remote Use**: Huawei MS2372h-607 (robust, supports AT commands, and wide temperature range).
 - **For Portability**: Huawei E3372h-153 (compact, reliable, and supports external antennas).
 
-### Alternatives (Amazon.de)
+##### Alternatives (Amazon.de)
 - **[Huawei E3372h-607](https://www.amazon.de/dp/B07VVX257H)**: Similar to E3372h-153 but with additional band support.
 - **[TP-Link M7350](https://www.amazon.de/dp/B07P5PKYGH)**: 4G LTE mobile Wi-Fi hotspot, supports external antennas, and has a built-in battery for portability.
 
@@ -193,9 +193,9 @@ All modems listed are "Global" capable, unless noted otherwise.
 [5] Cables
 ----------
 
-# Supported/Tested Cables (HDMI, USB, etc.)
+### Supported/Tested Cables (HDMI, USB, etc.)
 
-## Tested with DJI Pocket 3 (Power + Data)
+#### Tested with DJI Pocket 3 (Power + Data)
 
 | Product Link                                                                 | Type/Description                          | Notes/Weaknesses                                                                 | Streaming Suitability |
 |-----------------------------------------------------------------------------|-------------------------------------------|---------------------------------------------------------------------------------|-----------------------|
@@ -205,7 +205,7 @@ All modems listed are "Global" capable, unless noted otherwise.
 
 ---
 
-## Tested with Logi-Link Active USB Hub (DJI Action 3/4, M1 Modem)
+#### Tested with Logi-Link Active USB Hub (DJI Action 3/4, M1 Modem)
 
 | Product Link                                                                 | Type/Description                          | Notes/Weaknesses                                                                 | Streaming Suitability |
 |-----------------------------------------------------------------------------|-------------------------------------------|---------------------------------------------------------------------------------|-----------------------|
@@ -219,18 +219,18 @@ All modems listed are "Global" capable, unless noted otherwise.
 
 ---
 
-## Analysis and Recommendations
+#### Analysis and Recommendations
 
-### Strengths
+##### Strengths
 - **USB-C to USB-C Cables (B0BXNHC317, B0D7C6QZZS)**: Ideal for direct power + data transfer. No reported weaknesses.
 - **USB-C Splitter (B07VVX257H)**: Useful for separating power and data, but ensure it supports the required bandwidth for streaming.
 - **Active USB Hubs (B07WLNG1XJ, B0BFDM33Z6, B0BC3FDL35, B098WVHH5L)**: Generally reliable for streaming if power requirements are met.
 
-### Weaknesses
+##### Weaknesses
 - **Power Limitations**: Some active USB hubs (e.g., B01MR4XS9B) may not provide sufficient power for multiple high-power devices. Consider a **powered USB hub** if you experience power issues.
 - **Heat and Speed**: Older or non-powered hubs (e.g., B071SHK51C, B07CVX3516) may overheat or not support the latest USB speeds.
 
-### Suggested Alternatives (Amazon.de)
+##### Suggested Alternatives (Amazon.de)
 1. **Powered USB Hub**:
    [UGREEN USB 3.0 Hub](https://www.amazon.de/dp/B07P5PKYGH)
    - **Why?** Provides stable power and supports USB 3.0 speeds, reducing overheating and power issues.
@@ -247,7 +247,7 @@ All modems listed are "Global" capable, unless noted otherwise.
 
 ---
 
-## Summary
+#### Summary
 - For **direct connections**, use **USB-C to USB-C cables** (B0BXNHC317, B0D7C6QZZS).
 - For **splitting power/data**, use the **USB-C splitter (B07VVX257H)**.
 - For **multiple devices**, use a **powered USB hub** (e.g., UGREEN B07P5PKYGH).
