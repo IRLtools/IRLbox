@@ -99,9 +99,66 @@ All modems listed are "Global" capable, unless noted otherwise.
 [4] Cables
 ----------
 
-| Cables | Type | Purchase Link |
-|--------|------|---------------|
-|        |      |               |
+# Supported/Tested Cables (HDMI, USB, etc.)
+
+## Tested with DJI Pocket 3 (Power + Data)
+
+| Product Link                                                                 | Type/Description                          | Notes/Weaknesses                                                                 | Streaming Suitability |
+|-----------------------------------------------------------------------------|-------------------------------------------|---------------------------------------------------------------------------------|-----------------------|
+| [Amazon: B0BXNHC317](https://www.amazon.de/dp/B0BXNHC317)                   | USB-C to USB-C (Power + Data)             | No major weaknesses reported.                                                    | ✅ High              |
+| [Amazon: B0D7C6QZZS](https://www.amazon.de/dp/B0D7C6QZZS)                   | USB-C to USB-C (Power + Data)             | No major weaknesses reported.                                                    | ✅ High              |
+| [Amazon: B07VVX257H](https://www.amazon.de/dp/B07VVX257H)                   | USB-C Splitter (Power + Data)             | **Very useful splitter**, but check for data bandwidth limitations if used with multiple high-bandwidth devices. | ✅ High (if used for single device) |
+
+---
+
+## Tested with Logi-Link Active USB Hub (DJI Action 3/4, M1 Modem)
+
+| Product Link                                                                 | Type/Description                          | Notes/Weaknesses                                                                 | Streaming Suitability |
+|-----------------------------------------------------------------------------|-------------------------------------------|---------------------------------------------------------------------------------|-----------------------|
+| [Amazon: B01MR4XS9B](https://www.amazon.de/dp/B01MR4XS9B)                   | Active USB 3.0 Hub                        | May not provide enough power for multiple high-power devices.                    | ⚠️ Moderate (power)   |
+| [Amazon: B07WLNG1XJ](https://www.amazon.de/dp/B07WLNG1XJ)                   | Active USB 3.0 Hub                        | No major weaknesses reported.                                                    | ✅ High              |
+| [Amazon: B07CVX3516](https://www.amazon.de/dp/B07CVX3516)                   | Active USB 3.0 Hub                        | Some users report overheating with prolonged use.                                | ⚠️ Moderate (heat)   |
+| [Amazon: B0BFDM33Z6](https://www.amazon.de/dp/B0BFDM33Z6)                   | Active USB 3.0 Hub                        | No major weaknesses reported.                                                    | ✅ High              |
+| [Amazon: B0BC3FDL35](https://www.amazon.de/dp/B0BC3FDL35)                   | Active USB 3.0 Hub                        | No major weaknesses reported.                                                    | ✅ High              |
+| [Amazon: B098WVHH5L](https://www.amazon.de/dp/B098WVHH5L)                   | Active USB 3.0 Hub                        | No major weaknesses reported.                                                    | ✅ High              |
+| [Amazon: B071SHK51C](https://www.amazon.de/dp/B071SHK51C)                   | Active USB 3.0 Hub                        | Older model; may not support USB 3.1/3.2 speeds.                                 | ⚠️ Moderate (speed)  |
+
+---
+
+## Analysis and Recommendations
+
+### Strengths
+- **USB-C to USB-C Cables (B0BXNHC317, B0D7C6QZZS)**: Ideal for direct power + data transfer. No reported weaknesses.
+- **USB-C Splitter (B07VVX257H)**: Useful for separating power and data, but ensure it supports the required bandwidth for streaming.
+- **Active USB Hubs (B07WLNG1XJ, B0BFDM33Z6, B0BC3FDL35, B098WVHH5L)**: Generally reliable for streaming if power requirements are met.
+
+### Weaknesses
+- **Power Limitations**: Some active USB hubs (e.g., B01MR4XS9B) may not provide sufficient power for multiple high-power devices. Consider a **powered USB hub** if you experience power issues.
+- **Heat and Speed**: Older or non-powered hubs (e.g., B071SHK51C, B07CVX3516) may overheat or not support the latest USB speeds.
+
+### Suggested Alternatives (Amazon.de)
+1. **Powered USB Hub**:
+   [UGREEN USB 3.0 Hub](https://www.amazon.de/dp/B07P5PKYGH)
+   - **Why?** Provides stable power and supports USB 3.0 speeds, reducing overheating and power issues.
+
+2. **High-Speed USB-C Cable**:
+   [Anker PowerLine+ USB-C to USB-C](https://www.amazon.de/dp/B07S8YZBX1)
+   - **Why?** Supports 60W power delivery and 10Gbps data transfer, ideal for streaming.
+
+3. **USB-C Y-Cable (Power + Data)**:
+   [Baseus USB-C Y-Cable](https://www.amazon.de/dp/B07ZJQJ1X1)
+   - **Why?** Allows simultaneous power and data transfer, useful for devices with high power demands.
+   
+(analyzed by https://chat.mistral.ai/chat)
+
+---
+
+## Summary
+- For **direct connections**, use **USB-C to USB-C cables** (B0BXNHC317, B0D7C6QZZS).
+- For **splitting power/data**, use the **USB-C splitter (B07VVX257H)**.
+- For **multiple devices**, use a **powered USB hub** (e.g., UGREEN B07P5PKYGH).
+- Avoid older or non-powered hubs if you need **high-speed streaming**.
+
 
 [5] Cases for IRLbox
 --------------------
