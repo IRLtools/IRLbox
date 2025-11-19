@@ -15,6 +15,7 @@
   - [Use Cases & Tips](/docs/irlbridge/use-cases-tips.md)
 - Hardware
   - [Compatible Gear](/docs/devices/gear-recommendations-tested.md)
+  - [Wifi](/docs/devices/wifi-supported.md)
 - Developers
   - [API Server](/docs/developers/api-server.md)
   - [Cellular Band Information](/docs/devices/cellular_band_info.md)
