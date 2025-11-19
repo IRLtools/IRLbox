@@ -46,7 +46,7 @@ All modems listed are "Global" capable, unless noted otherwise.
 
 > [Cellular Band Information](https://irlbox.com/#/docs/devices/cellular_band_info)
 
-[12] WiFi Modules
+[2] WiFi Modules
 --------------------
 
 | Model | Type | Compatibility | Purchase Link |
@@ -82,7 +82,99 @@ All modems listed are "Global" capable, unless noted otherwise.
 > > **M.2 (NGFF) wifi modules are *only* compatible with Rock 5A, Orange Pi 5 Plus, and other *supported* SBCs with an M.2 "E-Key" Slot.**  
 > > Additionally, Intel modules are not recommended for creating an access point (AP) or "hotspot".
 
-[3] Cameras
+[3] USB Modem Sticks (Huwei, etc.)
+--------------------
+
+# USB Modem/Internet/Surf Sticks (Huawei, ZTE)
+
+## Huawei E8372h-320
+   Spec/Feature         | Details                                                                 |
+ |----------------------|-------------------------------------------------------------------------|
+ | **Supported Bands**  | LTE FDD: B1/B3/B5/B7/B8/B20/B28 (800/900/1800/2100/2600 MHz)          |
+ | **3G/2G Bands**      | DC-HSPA+/HSPA/UMTS: B1/B5/B8; GSM: 850/900/1800/1900 MHz                  |
+ | **Max Speed**         | LTE DL: 150 Mbps, UL: 50 Mbps                                            |
+ | **Power Usage**       | USB-powered (~5V, typical for USB modems)                                |
+ | **Signal Strength**  | External antenna port (TS-9) for improved signal in weak areas         |
+ | **Notes**            | Supports up to 16 Wi-Fi users; plug-and-play; no Ethernet LAN            |
+
+---
+
+## Huawei E3372h-153
+ | Spec/Feature         | Details                                                                 |
+ |----------------------|-------------------------------------------------------------------------|
+ | **Supported Bands**  | LTE FDD: B1/B3/B7/B8/B20/B28 (800/900/1800/2100/2600 MHz)              |
+ | **3G/2G Bands**      | DC-HSPA+/HSPA/UMTS: B1/B8; GSM: 850/900/1800/1900 MHz                    |
+ | **Max Speed**         | LTE DL: 150 Mbps, UL: 50 Mbps                                            |
+ | **Power Usage**       | USB-powered (~5V, typical for USB modems)                                |
+ | **Signal Strength**  | External antenna port (TS-9) for improved signal in weak areas         |
+ | **Notes**            | Compact, portable; no Wi-Fi or Ethernet LAN                             |
+
+---
+
+## Huawei E3327s-153
+ | Spec/Feature         | Details                                                                 |
+ |----------------------|-------------------------------------------------------------------------|
+ | **Supported Bands**  | LTE FDD: B1/B3/B7/B8/B20 (800/900/1800/2100/2600 MHz)                   |
+ | **3G/2G Bands**      | DC-HSPA+/HSPA/UMTS: B1/B8; GSM: 850/900/1800/1900 MHz                    |
+ | **Max Speed**         | LTE DL: 150 Mbps, UL: 50 Mbps                                            |
+ | **Power Usage**       | USB-powered (~5V, typical for USB modems)                                |
+ | **Signal Strength**  | External antenna port (TS-9) for improved signal in weak areas         |
+ | **Notes**            | Similar to E3372, but may have regional band restrictions               |
+
+---
+
+## Huawei MS2372h-607 (Japanese)
+ | Spec/Feature         | Details                                                                 |
+ |----------------------|-------------------------------------------------------------------------|
+ | **Supported Bands**  | LTE FDD: B1/B3/B7/B8/B19/B28; LTE TDD: B40 (2300 MHz)                   |
+ | **3G/2G Bands**      | UMTS: B1/B6/B8/B19; GSM: 850/900/1800/1900 MHz                           |
+ | **Max Speed**         | LTE DL: 150 Mbps, UL: 50 Mbps                                            |
+ | **Power Usage**       | USB-powered (5V/700mA)                                                  |
+ | **Signal Strength**  | Built-in antenna, supports diversity; external antenna port (TS-9)   |
+ | **Notes**            | Industrial-grade, supports AT commands; no Wi-Fi or Ethernet LAN      |
+
+---
+
+## ZTE MF79U
+ | Spec/Feature         | Details                                                                 |
+ |----------------------|-------------------------------------------------------------------------|
+ | **Supported Bands**  | LTE FDD: B1/B3/B5/B7/B8/B20 (800/900/1800/2100/2600 MHz); TDD: B38      |
+ | **3G/2G Bands**      | DC-HSPA+/HSPA/UMTS: B1/B8; GSM: 850/900/1800/1900 MHz                    |
+ | **Max Speed**         | LTE DL: 150 Mbps, UL: 50 Mbps                                            |
+ | **Power Usage**       | USB-powered (~5V, typical for USB modems)                                |
+ | **Signal Strength**  | External antenna port (TS-9) for improved signal in weak areas         |
+ | **Notes**            | Supports Wi-Fi hotspot (up to 10 users); 2.4G Wi-Fi; compact form factor |
+
+---
+
+## Analysis and Recommendations
+
+### Strengths
+- **Huawei E8372h-320**: Best for users needing both USB modem and Wi-Fi hotspot functionality. Supports a wide range of LTE bands and external antennas for improved signal.
+- **Huawei E3372h-153**: Compact and reliable for direct USB modem use, with external antenna support.
+- **Huawei MS2372h-607**: Industrial-grade, robust for M2M applications, supports AT commands, and has a wide temperature range.
+- **ZTE MF79U**: Unique for its built-in Wi-Fi hotspot, making it versatile for multiple devices.
+
+### Weaknesses
+- **Power Usage**: All are USB-powered, which may limit performance if the host device cannot supply sufficient power (e.g., weak USB ports).
+- **Signal Strength**: While external antenna ports are available, signal quality depends on the environment and network coverage.
+- **Heat**: Industrial models like MS2372h-607 require good ventilation at high temperatures.
+
+### Recommendations
+- **For Streaming/High Data Usage**: Huawei E8372h-320 or ZTE MF79U (due to Wi-Fi hotspot and external antenna support).
+- **For Industrial/Remote Use**: Huawei MS2372h-607 (robust, supports AT commands, and wide temperature range).
+- **For Portability**: Huawei E3372h-153 (compact, reliable, and supports external antennas).
+
+### Alternatives (Amazon.de)
+- **[Huawei E3372h-607](https://www.amazon.de/dp/B07VVX257H)**: Similar to E3372h-153 but with additional band support.
+- **[TP-Link M7350](https://www.amazon.de/dp/B07P5PKYGH)**: 4G LTE mobile Wi-Fi hotspot, supports external antennas, and has a built-in battery for portability.
+
+   
+(analyzed by https://chat.mistral.ai/chat)
+
+
+
+[4] Cameras
 -----------
 
 | Cameras | Supported Modes | Compatibility | Purchase Link | Notes |
@@ -96,7 +188,7 @@ All modems listed are "Global" capable, unless noted otherwise.
 | Sony HDR-AS300 | HDMI | <img src="/docs/assets/0faad45f973f2cf62bf433140a30e833a8c2ceb0.png" class="align-center" alt="green_check_32px.png" /> |  |  |
 | Sony HDR-AS200V | HDMI | <img src="/docs/assets/0faad45f973f2cf62bf433140a30e833a8c2ceb0.png" class="align-center" alt="green_check_32px.png" /> |  | Bad stabilization |
 
-[4] Cables
+[5] Cables
 ----------
 
 # Supported/Tested Cables (HDMI, USB, etc.)
@@ -160,26 +252,7 @@ All modems listed are "Global" capable, unless noted otherwise.
 - Avoid older or non-powered hubs if you need **high-speed streaming**.
 
 
-[5] Cases for IRLbox
---------------------
-
-| Cases for IRLbox | Compatibility | Purchase Link |
-|------------------|---------------|---------------|
-|                  |               |               |
-
-[6] Powerbank / Batteries
--------------------------
-
-| Powerbank / Batteries  | Capacity | Purchase Link  |
-|------------------------|----------|----------------|
-| INIU 25000mah          | 92.5wh   | [Amazon\*][39] |
-| INIU 27000mah          | 99wh     | [Amazon\*][40] |
-| INIU 20000mah          | 74wh     | [Amazon\*][41] |
-| UGREEN Nexode 20000mah | 72wh     | [Amazon\*][42] |
-| UGREEN Nexode 25000mah | 90wh     | [Amazon\*][43] |
-| Anker 737 24000mah     | 86wh     | [Amazon\*][44] |
-
-[45] Powered USB Hubs
+[6] Powered USB Hubs
 ------------------------
 
 | Powered USB Hubs | Output Ports | Input Ports | Power Supply | Purchase Link | Notes |
@@ -237,10 +310,31 @@ All modems listed are "Global" capable, unless noted otherwise.
   [43]: https://amzn.to/3PcZTA8
   [44]: https://amzn.to/3Pb8WBw
   [45]: https://irlbox.com/#powered-usb-hubs
+  
+  
+[7] Powerbank / Batteries
+-------------------------
+
+| Powerbank / Batteries  | Capacity | Purchase Link  |
+|------------------------|----------|----------------|
+| INIU 25000mah          | 92.5wh   | [Amazon\*][39] |
+| INIU 27000mah          | 99wh     | [Amazon\*][40] |
+| INIU 20000mah          | 74wh     | [Amazon\*][41] |
+| UGREEN Nexode 20000mah | 72wh     | [Amazon\*][42] |
+| UGREEN Nexode 25000mah | 90wh     | [Amazon\*][43] |
+| Anker 737 24000mah     | 86wh     | [Amazon\*][44] |
+
+
+[8] Backpack
 
 
 
+[9] Cases for IRLbox
+--------------------
 
+| Cases for IRLbox | Compatibility | Purchase Link |
+|------------------|---------------|---------------|
+|                  |               |               |
 
 
 
