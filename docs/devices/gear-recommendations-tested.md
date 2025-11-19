@@ -33,8 +33,10 @@ All modems listed are "Global" capable, unless noted otherwise.
 | Quectel RM520N-GL (SDX62) | M.2 | <img src="/docs/assets/0faad45f973f2cf62bf433140a30e833a8c2ceb0.png" class="align-center" alt="green_check_32px.png" /> | 5G / Cat-16 | [AliExpress][5] |  |
 | Quectel RM530N-GL (SDX65) | M.2 | <img src="/docs/assets/0faad45f973f2cf62bf433140a30e833a8c2ceb0.png" class="align-center" alt="green_check_32px.png" /> | 5G / Cat-16 | [AliExpress][6] |  |
 | Quectel RM551E-GL (SDX75) | M.2 | <img src="/docs/assets/0faad45f973f2cf62bf433140a30e833a8c2ceb0.png" class="align-center" alt="green_check_32px.png" /> | 5G / Cat-20 | [AliExpress][7] | Highest cost / Most powerful |
+| Quectel RM520NGLAA-M20-SGASA | M.2 | | 5G | | |
 | Foxconn T77W968 (SDX20) | M.2 | <img src="/docs/assets/6a7b4e3328bf783795778f5147aa6c5a24c1a9bd.png" class="align-center" alt="orange_q_32px.png" /> | 4G / Cat-16 | [AliExpress][8] |  |
 | Fibocom L850-GL | M.2 | <img src="/docs/assets/6a7b4e3328bf783795778f5147aa6c5a24c1a9bd.png" class="align-center" alt="orange_q_32px.png" /> | 4G / Cat-9 | [AliExpress][9] |  |
+| Fibocom FM350GL | M.2 | | 4G | | |
 | GL.iNet GL-XE300 (w/batt) | Router | <img src="/docs/assets/0faad45f973f2cf62bf433140a30e833a8c2ceb0.png" class="align-center" alt="green_check_32px.png" /> | 4G / Cat-4 | [GL.iNet] | Does not support band 66 |
 | GL.iNet GL-E750V2 (w/batt) | Router | <img src="/docs/assets/0faad45f973f2cf62bf433140a30e833a8c2ceb0.png" class="align-center" alt="green_check_32px.png" /> | 4G / Cat-6 | [Amazon\*] |  |
 | GL.iNet GL-XE3000 (w/batt) | Router | <img src="/docs/assets/0faad45f973f2cf62bf433140a30e833a8c2ceb0.png" class="align-center" alt="green_check_32px.png" /> | 5G / Cat-16 | [GL.iNet][10] |  |
@@ -88,7 +90,7 @@ All modems listed are "Global" capable, unless noted otherwise.
 # USB Modem/Internet/Surf Sticks (Huawei, ZTE)
 
 ## Huawei E8372h-320
-   Spec/Feature         | Details                                                                 |
+ |  Spec/Feature         | Details                                                                 |
  |----------------------|-------------------------------------------------------------------------|
  | **Supported Bands**  | LTE FDD: B1/B3/B5/B7/B8/B20/B28 (800/900/1800/2100/2600 MHz)          |
  | **3G/2G Bands**      | DC-HSPA+/HSPA/UMTS: B1/B5/B8; GSM: 850/900/1800/1900 MHz                  |
@@ -326,6 +328,7 @@ All modems listed are "Global" capable, unless noted otherwise.
 
 
 [8] Backpack
+-------------------------
 
 
 
