@@ -14,4 +14,4 @@ This containerized approach simplifies deployment and management.
 
 The actual documentation and files for download has moved to
 
-https://github.com/moo-the-cow/moo-rist-hosting-native
+https://github.com/moo-the-cow/docker-streaming
