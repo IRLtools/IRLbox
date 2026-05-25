@@ -17,6 +17,7 @@
   - [Compatible Gear](/docs/devices/gear-recommendations-tested.md)
   - [Wifi](/docs/devices/wifi-supported.md)
   - [Disk IO Statistics](/docs/devices/disk-io-statistics.md)
+  - [NPU/AI Statistics](/docs/devices/npu-statistics.md)
 - Developers
   - [API Server](/docs/developers/api-server.md)
   - [Cellular Band Information](/docs/devices/cellular_band_info.md)

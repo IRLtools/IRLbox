@@ -38,6 +38,7 @@ dd if=/dev/zero of=test bs=1G count=1 oflag=direct
 | Storage Type | Cached Reads (MB/s) | Buffered Reads (MB/s) | Direct Write (MB/s) |
 |--------------|---------------------|------------------------|---------------------|
 | SD           | 4327.17             | 66.19                  | 56.3                |
+| eMMC         | 4005.60             | 332.12                 | 221                 |
 
 ---
 
