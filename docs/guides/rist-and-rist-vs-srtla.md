@@ -25,7 +25,7 @@ The core components of libRIST span configuration profiles, command-line utiliti
 
 ---
 
-## 2. Protocol Feature Matrix: RIST vs. SRTLA
+## 2. ⚖️ Protocol Feature Matrix: RIST vs. SRTLA
 
 The feature matrix highlights the dynamic RTT circuit-breaking features and how they contrast with SRTLA's rigid handling.
 
@@ -57,12 +57,3 @@ The feature matrix highlights the dynamic RTT circuit-breaking features and how 
 * **Proactive Path Mitigation:** Employs RTT monitoring to drop decaying cellular paths before they corrupt the stream buffer.
 * **Native IPv6 Stack:** Leverages modern carrier cellular routing directly without performance-reducing NAT64 translation layers.
 * **Cryptographic Perimeter:** Uses Zero-Knowledge proofs to secure ingest links against malicious stream hijacking.
-
-### ⚖️ The IRL Verdict: RIST vs. SRTLA
-
-| Deployment Scenario | Recommended Protocol | Operational Justification |
-| :--- | :--- | :--- |
-| **Unstable Multi-Sim Cellular (IRL Backpacks)** | **RIST** | Active monitoring instantly removes lagging modems, while SRTLA chokes trying to recover lost packets on the dead line. |
-| **Modern Cellular Carriers (IPv6 Providers)** | **RIST** | End-to-end native IPv6 bonding prevents unexpected path disconnects common to IPv4-only SRTLA proxies. |
-| **Securing Cloud Ingest Endpoints** | **RIST** | Broadcast-grade TLS and EAP-SRP validation completely outclass basic SRT passphrases. |
-| **Turnkey Open-Source DIY Ecosystems** | **SRTLA** | Maintains a temporary edge in low-cost Raspberry Pi field builds due to legacy firmware implementations. |
