@@ -49,7 +49,35 @@ The feature matrix highlights the dynamic RTT circuit-breaking features and how 
 
 ---
 
-## 3. Centered Summary & Comparison for IRL Streaming
+## 3. Architectural Fragmentation: The Problematics of Custom SRTLA Implementations
+
+Unlike RIST, which is governed by a singular, formal technical specification (VSF TR-06), SRTLA relies on a loose, community-accepted protocol blueprint. This has led to a fragmented ecosystem of custom implementations written in languages like Rust (`srtla_send`) and Go (`go-irl`). 
+
+While these alternative implementations offer specific language-level optimizations (such as memory safety or lighter binaries), they introduce severe architectural problems for mission-critical IRL streaming:
+
+### ⚠️ Lack of a Single Source of Truth
+* **Specification Drifts:** Because there is no official RFC or standards body governing SRTLA, every community implementation reverse-engineers the original BELABOX C/C++ reference code. 
+* **Silent Discrepancies:** Slight deviations in how a Rust or Go compiler optimizes network socket binding, memory allocation, or timing buffers can cause silent, intermittent bugs that are impossible to diagnose in the field.
+
+### 📉 Broken Timings and Jitter Buffer Mismatches
+* **Thread Scheduling Variance:** Go relies on a custom runtime scheduler (Goroutines), while Rust handles threading explicitly or via asynchronous runtimes (like Tokio). 
+* **Packet Interleaving Bugs:** SRTLA splits custom UDP packets across multiple paths and relies on hyper-precise microsecond timing to re-stitch them. When a Go or Rust implementation interacts with the legacy C++ SRT engine, subtle scheduling delays can widen the jitter window, triggering unexpected packet drops and video stutters on fluctuating cellular connections.
+
+### 🧩 Incomplete Protocol Features
+* **Cherry-Picked Implementations:** Custom implementations rarely feature parity with the full reference stack. A lightweight sender written for an embedded device might skip crucial error-reporting mechanisms, bandwidth tracking metrics, or edge-case fallback behaviors.
+* **Feature Drift Fragmentation:** One repo might implement specific connection heartbeats while another omits them, leading to random connection drops when swapping between different custom senders and receiving servers.
+
+### 🛡️ Security Vulnerabilities & Unvetted Crypto Layers
+* **Homegrown Security Wrappers:** Because the core SRTLA proxy architecture lacks native enterprise authentication, developers are left to roll their own security handshakes or simple passphrase logic in Go/Rust.
+* **Unvetted Implementations:** These custom authentication methods do not undergo the rigorous cryptographic review process that standard broadcast-grade protocols like RIST (with EAP-SRP and standardized TLS) receive, leaving ingest endpoints open to denial-of-service or hijacking attacks.
+
+### 🔄 Short Maintenance Lifecycles
+* **Abandoned Codebases:** Many community-built Rust and Go IRL streaming tools are maintained by individual hobbyists. 
+* **Upstream Breakage:** If the core underlying SRT protocol introduces a breaking change to its socket mechanics, these custom community repositories frequently lag months behind in updates—or get abandoned completely—leaving production field rigs stranded on outdated, insecure dependencies.
+
+---
+
+## 4. Centered Summary & Comparison for IRL Streaming
 
 
 ### 🌐 RIST Technical Profile for IRL Broadcasters
