@@ -5,7 +5,7 @@
   - [RIST Docker Guide](/docs/installation/rist-docker-guide.md)
   - [RIST Standalone Guide](/docs/installation/rist-standalone-guide.md)
 - Guides
-  - [what is RIST and RIST vs SRTLA] (/docs/guides/rist-and-rist-vs-srtla.md)
+  - [what is RIST and RIST vs SRTLA](/docs/guides/rist-and-rist-vs-srtla.md)
   - [Streaming Protocols](/docs/protocols/how-to-use-streaming-protocols.md)
   - [Device Connection](/docs/devices/how-to-connect-your-devices.md)
   - [Troubleshooting](/docs/troubleshooting/basic-troubleshooting.md)
