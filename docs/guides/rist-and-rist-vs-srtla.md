@@ -16,8 +16,6 @@ The core components of libRIST span configuration profiles, command-line utiliti
 ### Core Command Line Tools
 * **`ristsender`:** Captures an incoming local UDP/RTP stream and wraps it into a protected RIST transport container.
 * **`ristreceiver`:** Listens for incoming RIST packets, reassembles missing segments via ARQ, and outputs a clean UDP/RTP stream.
-* **`ristsrppasswd`:** A security utility used to generate SRP (Secure Remote Password) verification files for zero-knowledge password authentication.
-* **`risttunnel`:** Establishes a bidirectional, point-to-point virtual network interface protected by RIST's recovery architecture.
 
 ### URL Syntax & Engine Mechanics
 * **Sender / Outbound:** Formatted as a standard RIST protocol string to point data toward a remote receiver.
@@ -45,7 +43,6 @@ The feature matrix highlights the dynamic RTT circuit-breaking features and how 
 
 ## 3. Centered Summary & Comparison for IRL Streaming
 
-<div align="center">
 
 ### 🌐 RIST Technical Profile for IRL Broadcasters
 * **Multi-Carrier Bonding:** Aggregates cellular, Wi-Fi, and satellite connections seamlessly.
@@ -61,4 +58,3 @@ The feature matrix highlights the dynamic RTT circuit-breaking features and how 
 | **Modern Cellular Carriers (IPv6 Providers)** | **RIST** | End-to-end native IPv6 bonding prevents unexpected path disconnects common to IPv4-only SRTLA proxies. |
 | **Securing Cloud Ingest Endpoints** | **RIST** | Broadcast-grade TLS and EAP-SRP validation completely outclass basic SRT passphrases. |
 | **Turnkey Open-Source DIY Ecosystems** | **SRTLA** | Maintains a temporary edge in low-cost Raspberry Pi field builds due to legacy firmware implementations. |
-</div>
